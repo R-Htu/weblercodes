@@ -31,7 +31,6 @@ import EditCourse from './features/courses/pages/EditCourse';
 import CourseEditor from './features/courses/pages/CourseEditor';
 import CourseList from './features/courses/pages/CourseList';
 import { compilerLanguages, languagesInfo } from './data/compilerLanguages';
-// import {  ChannelsList } from './features/channels/pages/ChannelsList';
 import CoursePage from './features/courses/pages/CoursePage';
 import CourseLessonPage from './features/courses/pages/CourseLessonPage';
 import ChannelsPage from './features/channels/pages/ChannelsPage';
@@ -45,7 +44,6 @@ import FeedLayout from './features/feed/FeedLayout';
 import FeedCreate from './features/feed/components/FeedCreate';
 
 function App() {
-
   const allRoles = [...roles];
 
   return (
@@ -53,7 +51,7 @@ function App() {
 
       <Route element={<NoAuth />}>
         <Route path="Users">
-          <Route element={<Layout Header={<Header variant="light" />} Footer={<Footer />} />}>
+          <Route element={<Layout Header={<Header />} Footer={<Footer />} />}>
             <Route path="Login" element={<Login />} />
             <Route path="Register" element={<Register />} />
             <Route path="Forgot-Password" element={<ForgotPassword />} />
@@ -61,7 +59,7 @@ function App() {
         </Route>
       </Route>
 
-      <Route element={<Layout Header={<Header variant="light" />} Footer={<Footer />} />}>
+      <Route element={<Layout Header={<Header />} Footer={<Footer />} />}>
         <Route index element={<Home />} />
         <Route path="Terms-of-use" element={<TermsOfUse />} />
         <Route path="Contact" element={<Contact />} />
@@ -75,7 +73,7 @@ function App() {
       </Route>
 
       <Route path="Discuss">
-        <Route element={<Layout Header={<Header variant="light" />} Footer={<Footer />} />}>
+        <Route element={<Layout Header={<Header />} Footer={<Footer />} />}>
           <Route index element={<Discuss MainPage={<QuestionList />} />} />
           <Route path=":questionId" element={<Discuss MainPage={<DiscussPost />} />} />
           <Route element={<RequireAuth allowedRoles={allRoles} />}>
@@ -86,25 +84,23 @@ function App() {
       </Route>
 
       <Route path="Codes">
-        <Route element={<Layout Header={<Header variant="light" />} Footer={<Footer />} />}>
+        <Route element={<Layout Header={<Header />} Footer={<Footer />} />}>
           <Route index element={<Codes MainPage={<CodesList />} />} />
         </Route>
       </Route>
 
       <Route path="Compiler-Playground">
-        <Route element={<Layout Header={<Header variant="light" />} Footer={<Footer />} />}>
+        <Route element={<Layout Header={<Header />} Footer={<Footer />} />}>
           <Route index element={<PlaygroundMenu />} />
         </Route>
-        {
-          Object.keys(languagesInfo).map((lang, i) => {
-            return (<Route key={i} path={lang} element={<PlaygroundEditor language={lang as compilerLanguages} />} />);
-          })
-        }
+        {Object.keys(languagesInfo).map((lang, i) => (
+          <Route key={i} path={lang} element={<PlaygroundEditor language={lang as compilerLanguages} />} />
+        ))}
         <Route path=":codeId" element={<PlaygroundEditor language={null} />} />
       </Route>
 
       <Route path="Feed">
-        <Route element={<Layout Header={<Header variant="light" />} Footer={null} />}>
+        <Route element={<Layout Header={<Header />} Footer={null} />}>
           <Route index element={<FeedLayout />} />
           <Route element={<RequireAuth allowedRoles={allRoles} />}>
             <Route path="New" element={<FeedCreate />} />
@@ -114,15 +110,14 @@ function App() {
       </Route>
 
       <Route path="Profile">
-        <Route element={<Layout Header={<Header variant="light" />} Footer={<Footer />} />}>
+        <Route element={<Layout Header={<Header />} Footer={<Footer />} />}>
           <Route path=":userId" element={<Profile />} />
           <Route index element={<ProfileFromAuth />} />
         </Route>
       </Route>
 
       <Route path="Courses">
-
-        <Route element={<Layout Header={<Header variant="light" />} Footer={<Footer />} />}>
+        <Route element={<Layout Header={<Header />} Footer={<Footer />} />}>
           <Route element={<RequireAuth allowedRoles={["Admin", "Creator"]} />}>
             <Route path="Editor">
               <Route index element={<CoursesEditorPage MainPage={<CourseEditorList />} />} />
@@ -136,34 +131,31 @@ function App() {
           </Route>
         </Route>
 
-        <Route element={<Layout Header={<Header variant="light" />} Footer={<Footer />} />}>
+        <Route element={<Layout Header={<Header />} Footer={<Footer />} />}>
           <Route index element={<CourseList />} />
         </Route>
 
         <Route element={<RequireAuth allowedRoles={allRoles} />}>
           <Route path=":courseCode">
-            <Route element={<Layout Header={<Header variant="light" />} Footer={<Footer />} />}>
+            <Route element={<Layout Header={<Header />} Footer={<Footer />} />}>
               <Route index element={<CoursePage />} />
             </Route>
             <Route path="Lesson/:lessonId" element={<CourseLessonPage />} />
           </Route>
         </Route>
-
       </Route>
 
       <Route path="Channels">
-
-        <Route element={<Layout Header={<Header variant="light" hideChannelsButton />} Footer={null} />}>
+        <Route element={<Layout Header={<Header />} Footer={null} />}>
           <Route element={<RequireAuth allowedRoles={allRoles} />}>
             <Route index element={<ChannelsPage />} />
             <Route path=":channelId" element={<ChannelsPage />} />
           </Route>
         </Route>
-
       </Route>
 
       <Route path="Admin">
-        <Route element={<Layout Header={<Header variant="light" />} Footer={<></>} />}>
+        <Route element={<Layout Header={<Header />} Footer={<></>} />}>
           <Route element={<RequireAuth allowedRoles={["Admin", "Moderator"]} />}>
             <Route index element={<AdminHome />} />
             <Route path="UserSearch">
@@ -175,7 +167,7 @@ function App() {
       </Route>
 
       <Route path="Tools">
-        <Route element={<Layout Header={<Header variant="light" />} Footer={<></>} />}>
+        <Route element={<Layout Header={<Header />} Footer={<></>} />}>
           <Route index element={<ToolsHome />} />
           <Route element={<RequireAuth allowedRoles={["Admin", "Moderator"]} />}>
             <Route path="Tags" element={<TagHome />} />
@@ -183,11 +175,12 @@ function App() {
         </Route>
       </Route>
 
-      <Route element={<Layout Header={<Header variant="light" />} Footer={null} />}>
+      <Route element={<Layout Header={<Header />} Footer={null} />}>
         <Route path="/*" element={<NotFound />} />
       </Route>
+
     </Routes>
   );
-};
+}
 
 export default App;
