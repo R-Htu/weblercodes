@@ -27,13 +27,52 @@ function Home() {
             <div key={p} className="particle" style={{ left: `${Math.random() * 100}%`, animationDuration: `${5 + Math.random() * 10}s` }}></div>
           ))}
         </div>
-        <div className="wb-banner__logo">
-          <img className="wb-banner__logo__img" src="https://i.ibb.co/G3V38QM7/weblerlogowithpuppleblue.png" alt="Webler logo" />
-        </div>
-        
-        <h1 className="wb-banner__text">Software Engineering</h1>
-        <hr />
-        <p className="wb-banner__slogan">- - Building the future, one code at a time</p>
+          <div className="wb-banner__content">
+            <div className="wb-banner__logo">
+              <img className="wb-banner__logo__img" src="https://i.ibb.co/TqMYX9QQ/wblogocorrection.png" alt="logo" />
+            </div>
+            <h1 className="wb-banner__text">Software Engineering</h1>
+            <p className="wb-banner__slogan">-Building the future, one code at a time</p>
+          </div>
+
+            {/* Maximus image + duplicate behind */}
+          <div className="wb-image-wrappers">
+             <a href="https://www.weblercodes.com/Compiler-Playground/68cb67d00ca13b2e001a0f66" target="_blank" className="banner-img-wrapper">
+              <img className="wb-banner__maximus__img spread duplicate" src="https://i.ibb.co/q3JmHSHX/IMG-8870.jpg" alt="maximus bombasticus" />
+              <img className="wb-banner__maximus__img spread" src="https://i.ibb.co/q3JmHSHX/IMG-8870.jpg" alt="maximus bombasticus" />
+            </a>
+
+            {/* Gemoku image + duplicate behind */}
+            <a href="https://www.weblercodes.com/Compiler-Playground/68ca697f0ca13b2e0019f5d4" target="_blank" className="banner-img-wrapper">
+              <img className="wb-banner__gemoku__img spread duplicate" src="https://i.ibb.co/20TMCWP8/IMG-8871.jpg" alt="gemoku ttt" />
+              <img className="wb-banner__gemoku__img spread" src="https://i.ibb.co/20TMCWP8/IMG-8871.jpg" alt="gemoku ttt" />
+            </a>
+
+            {/* Memory image + duplicate behind */}
+            <a href="https://www.weblercodes.com/Compiler-Playground/68c497d092e463503d8d413f" target="_blank" className="banner-img-wrapper">
+              <img className="wb-banner__memory__img spread duplicate" src="https://i.ibb.co/kgdBzbpk/IMG-8872.jpg" alt="memory leak" />
+              <img className="wb-banner__memory__img spread" src="https://i.ibb.co/kgdBzbpk/IMG-8872.jpg" alt="memory leak" />
+            </a>
+
+            {/* Grotto image + duplicate behind */}
+            <a href="https://www.weblercodes.com/Compiler-Playground/68c4967f92e463503d8d40f1" target="_blank" className="banner-img-wrapper">
+              <img className="wb-banner__grotto__img spread duplicate" src="https://i.ibb.co/RpdFBSx4/IMG-8873.jpg" alt="grotto escape" />
+              <img className="wb-banner__grotto__img spread" src="https://i.ibb.co/RpdFBSx4/IMG-8873.jpg" alt="grotto escape" />
+            </a>
+
+            {/* Quiz image + duplicate behind */}
+            <a href="https://www.weblercodes.com/Compiler-Playground/68c3c77192e463503d8cf8c2" target="_blank" className="banner-img-wrapper">
+              <img className="wb-banner__quiz__img spread duplicate" src="https://i.ibb.co/Pdy1vbY/IMG-8874.jpg" alt="quiz" />
+              <img className="wb-banner__quiz__img spread" src="https://i.ibb.co/Pdy1vbY/IMG-8874.jpg" alt="quiz" />
+            </a>
+
+            <a href="https://www.weblercodes.com/Compiler-Playground/68b7d2c2486619aaa9bb9938" target="_blank" className="banner-img-wrapper">
+              <img className="wb-banner__code__img spread duplicate" src="https://i.ibb.co/bj1y1NLQ/IMG-8875.jpg" alt="quiz" />
+              <img className="wb-banner__code__img spread" src="https://i.ibb.co/bj1y1NLQ/IMG-8875.jpg" alt="quiz" />
+            </a>
+
+          </div>
+           
       </div>
 
       {/* Info Section */}
