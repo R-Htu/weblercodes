@@ -32,6 +32,7 @@ function Home() {
               <img className="wb-banner__logo__img" src="https://i.ibb.co/TqMYX9QQ/wblogocorrection.png" alt="logo" />
             </div>
             <h1 className="wb-banner__text">Software Engineering</h1>
+            <hr />
             <p className="wb-banner__slogan">-Building the future, one code at a time</p>
           </div>
 
@@ -60,15 +61,15 @@ function Home() {
               <img className="wb-banner__grotto__img spread" src="https://i.ibb.co/RpdFBSx4/IMG-8873.jpg" alt="grotto escape" />
             </a>
 
-            {/* Quiz image + duplicate behind */}
+            {/* Memory image + duplicate behind */}
             <a href="https://www.weblercodes.com/Compiler-Playground/68c3c77192e463503d8cf8c2" target="_blank" className="banner-img-wrapper">
-              <img className="wb-banner__quiz__img spread duplicate" src="https://i.ibb.co/Pdy1vbY/IMG-8874.jpg" alt="quiz" />
-              <img className="wb-banner__quiz__img spread" src="https://i.ibb.co/Pdy1vbY/IMG-8874.jpg" alt="quiz" />
+              <img className="wb-banner__quiz__img spread duplicate" src="https://i.ibb.co/tTSt9bHR/IMG-8876.jpg" alt="quiz" />
+              <img className="wb-banner__quiz__img spread" src="https://i.ibb.co/tTSt9bHR/IMG-8876.jpg" alt="quiz" />
             </a>
 
             <a href="https://www.weblercodes.com/Compiler-Playground/68b7d2c2486619aaa9bb9938" target="_blank" className="banner-img-wrapper">
-              <img className="wb-banner__code__img spread duplicate" src="https://i.ibb.co/bj1y1NLQ/IMG-8875.jpg" alt="quiz" />
-              <img className="wb-banner__code__img spread" src="https://i.ibb.co/bj1y1NLQ/IMG-8875.jpg" alt="quiz" />
+              <img className="wb-banner__code__img spread duplicate" src="https://i.ibb.co/bj1y1NLQ/IMG-8875.jpg" alt="code" />
+              <img className="wb-banner__code__img spread" src="https://i.ibb.co/bj1y1NLQ/IMG-8875.jpg" alt="code" />
             </a>
 
           </div>

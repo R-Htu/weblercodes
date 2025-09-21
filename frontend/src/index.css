@@ -573,34 +573,33 @@ ul {
   font-size: 8vmin;
   font-weight: 700;
   text-shadow: 0 0 10px #0ef5e2, 0 0 20px #aa8efc;
-  color: rgb(69, 69, 69);
+  color: rgb(71, 73, 72);
   padding-left: 5vmin;
 
 }
 
-.wb-banner hr {
-  width: 50%;          
-  border: none;        
-  height: 2px;     
-  background: #101111;  
-  margin: 1rem auto;  
-  box-shadow: 0 0 10px #7d9259, 0 0 20px #1f9385; 
-  border-radius: 1px; 
-
+.wb-banner__content hr {
+  width: 50%;         
+  margin: 0.5vmin auto;   
+  border: none;         
+  height: 2px;      
+  background: linear-gradient(to right, #0ef5e2, #aa8efc); /* gradient line */
+  border-radius: 1px;
 }
+
 
 .wb-banner__slogan {
   font-size: 4vmin;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #8480c1aa;
+  color: #05e5f9aa;
   font-weight: 500;
   padding-left: 5vmin;
   
 }
 
 .spread {
-    height: 22vmin;
+    height: 25vmin;
     position: absolute;
     z-index: 1;
 }
@@ -618,66 +617,65 @@ ul {
 /* individual offsets for duplicates */
 
 .wb-banner__memory__img.duplicate {
-  top: calc(10% + 10px);
-  right: calc(1% + 10px);
+  top: calc(40% + 15px);
+  right: calc(1% + 15px);
   transform: translateX(-50%) scale(1.05);
 }
 
 .wb-banner__memory__img {
-    top: 10%;
+    top: 40%;
     right: 1%;
     transform: translateX(-50%);
 }
 
 .wb-banner__maximus__img.duplicate {
-  top: calc(27% + 10px);
-  right: calc(35% + 10px);
+  top: calc(10% + 13px);
+  right: calc(25% + 13px);
 }
 
 .wb-banner__maximus__img {
-    top: 27%;
-    right: 35%;
+    top: 10%;
+    right: 25%;
    
 }
 
 .wb-banner__quiz__img.duplicate {
-  top: calc(40% + 10px);
-  right: calc(4% - 10px);
+  top: calc(20% + 10px);
+  right: calc(8% - 10px);
 }
 
 .wb-banner__quiz__img {
-    top: 40%;
-    right: 4%;
+    top: 20%;
+    right: 8%;
   
 }
 
 .wb-banner__grotto__img.duplicate {
-  top: calc(45% + 10px);
-  right: calc(20% - 10px);
+  top: calc(68% + 13px);
+  right: calc(20% - 13px);
 }
 
 .wb-banner__grotto__img {
-    top: 45%;
+    top: 68%;
     right: 20%;
 }
 
-
 .wb-banner__code__img.duplicate {
-  top: calc(60% + 10px);
-  right: calc(30% - 10px);
+  top: calc(50% + 10px);
+  right: calc(35% - 10px);
 }
 .wb-banner__code__img {
-    top: 60%;
-    right: 30%;
+    top: 50%;
+    right: 35%;
 }
 
 .wb-banner__gemoku__img.duplicate {
-  top: calc(70% + 10px);
+  top: calc(66% + 10px);
   right: calc(10% + 10px);
 }
 
 .wb-banner__gemoku__img {
-    top: 70%;
+    top: 66%;
     right: 10%; 
 }
 
@@ -686,14 +684,14 @@ ul {
 @media (max-width:768px) {
 
     .wb-banner__logo__img {
-        width: 260px;       
+        width: 330px;       
         max-width: 400px;  
         top: 25%;       
     }
 
     .wb-banner__text {
         font-size: 4vmin;
-        margin-top: 2vmin;
+        margin: 0;
     }
 
     .wb-banner hr {
@@ -701,11 +699,11 @@ ul {
     }
 
     .wb-banner__slogan {
-        font-size: 3vmin;   
+        font-size: 3vmin;  
     }
 
     .spread {
-        height: 17vmin;
+        height: 15vmin;
         position: absolute;
         z-index: 1;
     }
@@ -713,62 +711,62 @@ ul {
     .spread.duplicate {
         position: absolute;
         transform: scale(1.05);
-        filter: blur(1px);
+        filter: blur(-4px);
         opacity: 0.45;
         z-index: 0;
         pointer-events: none;
     }
 
     .wb-banner__memory__img.duplicate {
-        top: calc(10% + 10px);
-        right: calc(-5% + 10px);
+        top: calc(25% + 10px);
+        right: calc(-7% + 10px);
         transform: translateX(-50%) scale(1.05);
     }
 
     .wb-banner__memory__img {
-        top: 10%;
-        right: -5%;
+        top: 25%;
+        right: -7%;
         transform: translateX(-50%);
     }
 
     .wb-banner__maximus__img.duplicate {
-        top: calc(27% + 10px);
-        right: calc(20% + 10px);
+        top: calc(45% + 10px);
+        right: calc(16% + 10px);
         
     }
 
     .wb-banner__maximus__img {
-        top: 27%;
-        right: 20%;
+        top: 45%;
+        right: 16%;
     }
 
     .wb-banner__grotto__img.duplicate {
-        top: calc(37% + 10px);
-        right: calc(10% - 10px);
+        top: calc(42% + 10px);
+        right: calc(4% - 10px);
     }
 
     .wb-banner__grotto__img {
-        top: 37%;
-        right: 10%;
+        top: 42%;
+        right: 4%;
     }
 
     .wb-banner__quiz__img.duplicate {
-        top: calc(55% + 10px);
-        right: calc(5% - 10px);
+        top: calc(60% + 10px);
+        right: calc(10% - 10px);
     }
 
     .wb-banner__quiz__img {
-        top: 55%;
-        right: 5%;
+        top: 60%;
+        right: 10%;
     }
 
     .wb-banner__code__img.duplicate {
-        top: calc(60% + 10px);
-        right: calc(30% - 10px);
+        top: calc(70% + 10px);
+        right: calc(3% - 10px);
     }
     .wb-banner__code__img {
-        top: 60%;
-        right: 30%;
+        top: 70%;
+        right: 3%;
     }
 
     .wb-banner__gemoku__img.duplicate {
@@ -786,17 +784,16 @@ ul {
 @media (max-width:480px) {
 
     .wb-banner__content{
-        top: 30%;
+        top: 25%;
     }
 
     .wb-banner__logo__img {
-        width: 200px;         
+        width: 230px;         
         top: 30%;       
     }
 
     .wb-banner__text {
-        font-size: 4vmin;
-        margin-top: 1vmin;
+        font-size: 5vmin;
     }
 
     .wb-banner hr {
@@ -822,66 +819,68 @@ ul {
         pointer-events: none;
     }
 
+
+
     .wb-banner__memory__img.duplicate {
-        top: calc(36% + 10px);
-        right: calc(-5% + 10px);
+        top: calc(66% + 10px);
+        right: calc(40% + 10px);
         transform: translateX(-50%) scale(1.05);
     }
 
     .wb-banner__memory__img {
-        top: 36%;
-        right: -5%;
+        top: 66%;
+        right: 40%;
         transform: translateX(-50%);
     }
 
     .wb-banner__maximus__img.duplicate {
-        top: calc(75% + 10px);
-        right: calc(27% + 10px);
+        top: calc(78% + 10px);
+        left: calc(27% + 10px);
         
     }
 
     .wb-banner__maximus__img {
-        top: 75%;
-        right: 27%;
+        top: 78%;
+        left: 27%;
     }
 
     .wb-banner__grotto__img.duplicate {
         top: calc(58% + 10px);
-        right: calc(20% - 10px);
+        right: calc(45% - 10px);
     }
 
     .wb-banner__grotto__img {
         top: 58%;
-        right: 20%;
+        right: 45%;
     }
 
     .wb-banner__quiz__img.duplicate {
-        top: calc(58% + 10px);
-        right: calc(5% - 10px);
+        top: calc(78% + 10px);
+        right: calc(45% - 10px);
     }
 
     .wb-banner__quiz__img {
-        top: 58%;
-        right: 5%;
+        top: 78%;
+        right: 45%;
     }
 
     .wb-banner__code__img.duplicate {
         top: calc(60% + 10px);
-        right: calc(30% - 10px);
+        left: calc(15% - 10px);
     }
     .wb-banner__code__img {
         top: 60%;
-        right: 30%;
+        left: 15%;
     }
 
     .wb-banner__gemoku__img.duplicate {
         top: calc(70% + 10px);
-        right: calc(10% + 10px);
+        left: calc(7% + 10px);
     }
 
     .wb-banner__gemoku__img {
         top: 70%;
-        right: 10%; 
+        left: 8%; 
     }
 
 }
