@@ -4,12 +4,24 @@ import AuthNavigation from '../features/auth/components/AuthNavigation';
 import NotificationList from '../features/profile/pages/NotificationList';
 import { useAuth } from '../features/auth/context/authContext';
 import ChannelsButton from '../features/channels/components/ChannelsButton';
+import { useDarkMode } from '../context/DarkModeContext'; 
 
 function Header() {
   const { userInfo } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+
+  const { darkMode, toggleDarkMode } = useDarkMode(); 
+
+  // Apply/remove dark class on body when context changes
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [darkMode]);
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -51,13 +63,22 @@ function Header() {
           )}
         </nav>
 
-        {/* Auth actions */}
-        <div className="auth-actions">
+        {/* Auth actions + Dark Mode Button */}
+        <div className="auth-actions" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           {userInfo && <ChannelsButton />}
           {userInfo && <NotificationList />}
           <AuthNavigation />
         </div>
       </div>
+      
+      {/* 🌙 Dark mode toggle button */}
+      <button
+        onClick={toggleDarkMode} 
+        className="dark-mode-toggle"
+        aria-label="Toggle Dark Mode"
+      >
+        {darkMode ? '☀' : '☾'}
+      </button>
 
       {/* Hamburger */}
       <button
@@ -66,7 +87,7 @@ function Header() {
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Menu"
       >
-        <span style={{color:"blue"}}></span>
+        <span></span>
         <span></span>
         <span></span>
       </button>

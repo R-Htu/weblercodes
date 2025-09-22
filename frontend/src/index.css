@@ -1,4 +1,4 @@
-/* Base Reset */
+/* ================= Base Reset ================= */
 *,
 *::before,
 *::after {
@@ -8,18 +8,112 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Orbitron", sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
 }
 
-/* Header Styling */
+/* ================= Theme Variables ================= */
+:root {
+  /* -------- Light Mode -------- */
+  --background: #ffffff;
+  --text-color: #333;
+  --header-bg: 
+    linear-gradient(45deg, rgba(237, 237, 249, 0.7), rgba(252,243,243,0.85)),
+    url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
+  --nav-link-color: #33357b;
+  --nav-link-hover: blue;
+  --nav-link-underline: #8e92f7;
+  --hamburger-bar: #171616;
+  --auth-btn-bg: #4b4c89;
+  --auth-btn-hover: #3753d4;
+  --dropdown-bg: #fff;
+  --dropdown-border: #ddd;
+  --dropdown-shadow: rgba(0,0,0,0.1);
+  --dropdown-item-color: #333;
+  --dropdown-hover: #f0f0f0;
+  --dropdown-subtext: #888;
+  --toggle-bg: #000007;
+  --toggle-color: #afb3c7;
+
+  /* Banner Light Mode Colors */
+  --banner-bg-light: 
+    linear-gradient(135deg, rgba(220, 248, 255, 0.7), rgba(1, 14, 14, 1),rgba(15, 16, 17, 0.9),rgba(0, 0, 9, 0.99),rgba(242, 242, 254, 0.4),rgba(178, 178, 186, 0.6), rgba(248, 235, 235,0.4)),
+    url("https://i.ibb.co/3y8RJBwL/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-1.png");
+  --banner-text-light: #363e8a;
+  --banner-slogan-light: #f4feff;
+  --banner-line-light: linear-gradient(to right, #5ec1ff, #ff8efc);
+  --banner-text-shadow-light: 0 0 10px #00d9ff, 0 0 20px #f3f1fb;
+
+
+  /* -------- Dark Mode -------- */
+  --banner-bg-dark: 
+    linear-gradient(135deg, rgba(0, 0, 4, 0.7), rgba(0,0,0,0.95), rgba(38,40,40,0.99), rgba(146,149,155,0.69), rgba(0,0,11,0.9)),
+    url("https://i.ibb.co/3y8RJBwL/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-1.png");
+  --banner-text-dark: rgb(17, 17, 17);
+  --banner-slogan-dark: #fcfcffaa;
+  --banner-line-dark: linear-gradient(to right, #0ef5e2, #aa8efc);
+  --banner-text-shadow-dark: 0 0 10px #0ef5e2, 0 0 20px #aa8efc;
+}
+
+
+/* ================= Body Dark Mode Variables ================= */
+body.dark {
+  --background: #220000;
+  --text-color: #e3e2ea;
+  --header-bg: 
+    radial-gradient(circle at 70% center, rgba(73,72,70,0.5) 0%, rgba(1,14,16,0.2) 30%, rgba(12,13,14,0.9) 100%),
+    linear-gradient(45deg, rgb(0,0,0), rgba(4,26,28,0.8), rgba(0,6,6,0.9)),
+    url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
+  --nav-link-color: white;
+  --nav-link-hover: #4b4c89;
+  --nav-link-underline: #86abd7;
+  --hamburger-bar: #f5f5f5;
+  --auth-btn-bg: rgb(38,38,131);
+  --auth-btn-hover: #4b4c89;
+  --dropdown-bg: #2a2a2a;
+  --dropdown-border: #444;
+  --dropdown-shadow: rgba(0,0,0,0.6);
+  --dropdown-item-color: #f5f5f5;
+  --dropdown-hover: #7a6f6f;
+  --dropdown-subtext: #aaa;
+  --toggle-bg: white;
+  --toggle-bg-hover: rgb(143,152,110);
+  --toggle-color: orange;
+}
+
+/* ================= Dark Mode Toggle Button ================= */
+.dark-mode-toggle {
+  background: var(--toggle-bg);
+  color: var(--toggle-color);
+  border-radius: 50%;
+  border: 1px solid gray;
+  width: 5vmin;
+  height: 5vmin;
+  font-size: 4vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 75%;
+  left: 1%;
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background: var(--toggle-bg-hover);
+  transform: scale(1.1);
+}
+
+/* ================= Header Styling ================= */
+
 .wb-home-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:0 2rem;
+  padding: 0 2rem;
   height: 60px;
-  background: linear-gradient(45deg, rgba(237, 237, 249, 0.7), rgba(252,243,243,0.85)),
-              url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
+  background: var(--header-bg);
   background-size: cover;
   background-position: center;
   position: sticky;
@@ -48,15 +142,14 @@ body {
 
 .wb-home-header .nav-links a {
   text-decoration: none;
-  color: #33357b;
+  color: var(--nav-link-color);
   position: relative;
   display: inline-block;
   white-space: nowrap;
-
 }
 
 .wb-home-header .nav-links a:hover {
-    color: blue;
+  color: var(--nav-link-hover);
 }
 
 .wb-home-header .nav-links a::after {
@@ -66,7 +159,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #8e92f7;
+  background-color: var(--nav-link-underline);
   transform: scaleX(0);
   transition: transform 0.25s ease-out;
   transform-origin: bottom right;
@@ -77,7 +170,7 @@ body {
   transform-origin: bottom left;
 }
 
-/* Hamburger icon */
+/* ================= Hamburger Icon ================= */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -93,14 +186,13 @@ body {
 .hamburger span {
   height: 3px;
   width: 100%;
-  background-color: #171616;
+  background-color: var(--hamburger-bar);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
- 
 }
 .hamburger.active span:nth-child(2) {
   opacity: 0;
@@ -110,16 +202,18 @@ body {
   color: red;
 }
 
-/* --- Mobile responsive --- */
+/* ================= Mobile Responsive ================= */
 @media (max-width: 768px) {
   .wb-home-header .right-side {
     flex-direction: row; 
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
     max-height: 0;
     overflow: hidden;
     gap: 1rem;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--header-bg);
+    background-position: center;
+    background-size: cover;
     position: absolute;
     top: 100%;
     left: 0;
@@ -129,19 +223,22 @@ body {
     transform: translateY(-20px); 
     opacity: 0;
     transition: all 0.3s ease;
-    background: linear-gradient(45deg, rgba(237, 237, 249, 0.7), rgba(252,243,243,0.85)),
-              url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
-   background-size: cover;
-   background-position: center;
   }
 
-  .wb-home-header .right-side.open {
+.dark-mode-toggle {
+    width: 5vmin;
+    height: 5vmin;
+    font-size: 5vmin;
+
+}
+
+.wb-home-header .right-side.open {
     display: flex;
     max-height: 500px; 
     transform: translateY(0); 
     opacity: 1;
     padding: 1rem 2rem;
-  }
+}
 
   .wb-home-header .nav-links {
     flex-direction: column;
@@ -149,11 +246,8 @@ body {
     width: 30%;
     background: transparent;
     position: relative;
-    top: 0;
-    left: 0;
     padding: 0;
-    border-top: none;
-  }
+ }
 
   .wb-home-header .nav-links a::after {
      display: none;
@@ -164,9 +258,16 @@ body {
   }
 }
 
+@media (max-width: 468px) {
+    .dark-mode-toggle {
+        width: 6.5vmin;
+        height: 6.5vmin;
+        font-size: 5vmin;
 
+    }
+}
 
-/* Auth Navigation section  */
+/* ================= Auth Navigation ================= */
 .wb-home-auth-nav {
   position: relative;
   display: flex;
@@ -180,10 +281,9 @@ body {
  margin-right: 2vmin;
 }
 
-/* Login/Register buttons */
 .wb-home-auth-nav .btn {
   padding: 0.3vmin 1rem;
-  background: #4b4c89;
+  background: var(--auth-btn-bg);
   color: #fff;
   border: none;
   border-radius: 1vmin;
@@ -193,7 +293,7 @@ body {
 }
 
 .wb-home-auth-nav .btn:hover {
-  background: #3753d4;
+  background: var(--auth-btn-hover);
 }
 
 /* Profile dropdown */
@@ -214,10 +314,10 @@ body {
   position: absolute;
   top: 120%;
   right: 0;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--dropdown-bg);
+  border: 1px solid var(--dropdown-border);
   border-radius: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px var(--dropdown-shadow);
   min-width: 180px;
   z-index: 10;
   display: flex;
@@ -227,7 +327,7 @@ body {
 .wb-home-auth-nav .dropdown-menu .dropdown-item {
   padding: 0.75rem 1rem;
   font-size: 0.9rem;
-  color: #333;
+  color: var(--dropdown-item-color);
   background: none;
   border: none;
   text-align: left;
@@ -239,7 +339,7 @@ body {
 }
 
 .wb-home-auth-nav .dropdown-menu .dropdown-item:hover {
-  background: #f0f0f0;
+  background: var(--dropdown-hover);
 }
 
 .wb-home-auth-nav .dropdown-menu .name {
@@ -249,7 +349,7 @@ body {
 }
 
 .wb-home-auth-nav .dropdown-menu .name .sub {
-  color: #888;
+  color: var(--dropdown-subtext);
   font-size: 0.8rem;
 }
 
@@ -259,255 +359,7 @@ body {
   border-top: 1px solid #eee;
 }
 
-ul,
-p {
-    margin: 0;
-}
-
-ul {
-    list-style: none;
-}
-
-.wb-loader {
-    display: flex;
-    gap: 8px;
-}
-
-.wb-loader span {
-    width: 10px;
-    height: 10px;
-    background: #6c757d;
-    /* bootstrap secondary color */
-    border-radius: 50%;
-    animation: wb-loader__bounce 0.6s infinite alternate;
-}
-
-.wb-loader span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.wb-loader span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-@keyframes wb-loader__bounce {
-    from {
-        transform: translateY(0);
-        opacity: 0.6;
-    }
-
-    to {
-        transform: translateY(-8px);
-        opacity: 1;
-    }
-}
-
-
-.wb-login-wrapper {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.wb-login-container {
-    width: 392px;
-}
-
-.wb-user__image {
-    border-radius: 50%;
-}
-
-.channel-message:hover {
-    background-color: lightgray;
-}
-
-@media(max-width: 449px) {
-    .wb-login-container {
-        width: 100%;
-        padding: 32px 24px;
-    }
-}
-
-.wb-p-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 780px;
-    margin: 0 auto;
-    min-height: 100vh;
-}
-
-.wb-p-section__card {
-    max-width: 360px;
-    margin: 0 auto;
-}
-
-.wb-p-details__row {
-    margin-bottom: 8px;
-}
-
-.wb-p-details__avatar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media(max-width: 768px) {
-    .wb-p-details__avatar {
-        margin: 0 0 16px;
-    }
-}
-
-.wb-p-details__avatar-badge {
-    margin-top: -16px;
-}
-
-.wb-p-details__name {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 120%;
-}
-
-.wb-p-details__follows__button {
-    background: none;
-    border: none;
-    font-size: 16px;
-    padding: 0;
-}
-
-.wb-p-details__follows__button:hover {
-    background: none;
-    text-shadow: -0.025rem -0.012rem 0 currentcolor, .025rem .012rem currentcolor;
-}
-
-.wb-p-follow-item__avatar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.wb-p-follow-item__name {
-    font-size: 14px;
-}
-
-.wb-p-details__bio {
-    text-align: center;
-    word-break: break-all;
-}
-
-@media(min-width: 576px) {
-    .wb-modal__container.edit-profile {
-        width: 567px;
-        min-height: 544px;
-    }
-
-    .wb-modal__container.follows {
-        width: 367px;
-        max-height: 80vh;
-    }
-
-    .wb-modal__container.codes {
-        width: 360px;
-        max-height: 80vh;
-    }
-
-    .wb-modal__container.console {
-        height: 923px;
-        max-height: 90vh;
-    }
-
-    .wb-modal__container.comments {
-        height: 796px;
-        max-height: 90vh;
-        position: relative;
-    }
-
-    .wb-p-details__bio {
-        text-align: left;
-    }
-}
-
-/*Webler home page*/
-
-.wb-home {
-    width: 100%;
-    height: 700px;
-    background-color: rgb(34, 34, 34);
-    color: aliceblue;
-}
-
-.wb-home .header p {
-    font-size: 60px;
-
-}
-
-
-.wb-home-why-wb {
-    width: 100%;
-    height: auto;
-    background-color: aliceblue;
-}
-
-
-.wb-home-why-wb img {
-    width: 100%;
-}
-
-
-/*Webler discuss page*/
-
-.wb-discuss-questions-list-page {
-    min-height: 100vh;
-}
-
-.wb-discuss-empty-questions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 160px auto;
-}
-
-.wb-discuss-question__title {
-    word-break: break-word;
-    width: 80%;
-}
-
-.wb-home-why_wb_card {
-    border: none;
-    color: rgb(57, 57, 57);
-    box-shadow: 0px 0px 10px rgb(224, 224, 224);
-}
-
-.wb-home-why-wb img {
-    width: 100%;
-
-}
-
-.wb-home-platform_header {
-    margin-top: 80px;
-    margin-bottom: 80px;
-    color: rgb(57, 57, 57);
-}
-
-.wb-home-perfect-platform {
-
-    width: 100%;
-    height: auto;
-
-}
-
-.wb-home-perfect-platform_card {
-    border: none;
-    box-shadow: 0px 0px 10px rgb(224, 224, 224);
-    color: rgb(64, 85, 104);
-    margin-bottom: 80px;
-
-}
-
-
-/* Background with animated particles / gradient */
-
+/* Background with animated particles / gradient *//* ================= Banner Styles ================= */
 .particles {
   position: absolute;
   width: 100%;
@@ -538,7 +390,6 @@ ul {
   min-height: 80vh;              
   overflow: hidden;
   text-align: start;
-  font-family: "Orbitron", sans-serif;
 }
 
 .wb-banner::before {
@@ -548,13 +399,29 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background:
-            linear-gradient(135deg, rgba(220, 223, 225, 0.8), rgba(1, 20, 28, 0.9),rgba(0, 4, 12, 0.99), rgba(246, 246, 250, 0.2)),
-            url("https://i.ibb.co/3y8RJBwL/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-1.png");
+  background:var(--banner-bg-light);
  background-position: center;
   background-size: conver;
   z-index: -2;
 }
+
+/* Dark Mode */
+.dark .wb-banner::before {
+  background: var(--banner-bg-dark);
+  background-position: center;
+  background-size: cover;
+}
+.dark .wb-banner__text {
+  color: var(--banner-text-dark);
+  text-shadow:var(--banner-text-shadow-dark);
+}
+.dark .wb-banner__slogan {
+  color: var(--banner-slogan-dark);
+}
+.dark .wb-banner__content hr {
+  background: var(--banner-line-dark);
+}
+
 
 /* Logo & Banner Text */
 
@@ -565,6 +432,7 @@ ul {
    position: absolute;
    top: 20%;
 }
+
 .wb-banner__logo__img {
     width: 350px;
 }
@@ -572,8 +440,8 @@ ul {
 .wb-banner__text {
   font-size: 8vmin;
   font-weight: 700;
-  text-shadow: 0 0 10px #0ef5e2, 0 0 20px #aa8efc;
-  color: rgb(71, 73, 72);
+  text-shadow:var(--banner-text-shadow-light);
+  color: var(--banner-text-light);
   padding-left: 5vmin;
 
 }
@@ -592,7 +460,7 @@ ul {
   font-size: 4vmin;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #05e5f9aa;
+  color: var(--banner-slogan-light);
   font-weight: 500;
   padding-left: 5vmin;
   
@@ -691,7 +559,8 @@ ul {
 
     .wb-banner__text {
         font-size: 4vmin;
-        margin: 0;
+        margin-top: 2vmin;
+        margin-bottom: 0;
     }
 
     .wb-banner hr {
@@ -1216,6 +1085,253 @@ ul {
   animation: heartbeat 1.3s infinite;
   transition: transform 0.3s ease;
 }
+
+ul,
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.wb-loader {
+    display: flex;
+    gap: 8px;
+}
+
+.wb-loader span {
+    width: 10px;
+    height: 10px;
+    background: #6c757d;
+    /* bootstrap secondary color */
+    border-radius: 50%;
+    animation: wb-loader__bounce 0.6s infinite alternate;
+}
+
+.wb-loader span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.wb-loader span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes wb-loader__bounce {
+    from {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+
+    to {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+}
+
+
+.wb-login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wb-login-container {
+    width: 392px;
+}
+
+.wb-user__image {
+    border-radius: 50%;
+}
+
+.channel-message:hover {
+    background-color: lightgray;
+}
+
+@media(max-width: 449px) {
+    .wb-login-container {
+        width: 100%;
+        padding: 32px 24px;
+    }
+}
+
+.wb-p-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 780px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.wb-p-section__card {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.wb-p-details__row {
+    margin-bottom: 8px;
+}
+
+.wb-p-details__avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width: 768px) {
+    .wb-p-details__avatar {
+        margin: 0 0 16px;
+    }
+}
+
+.wb-p-details__avatar-badge {
+    margin-top: -16px;
+}
+
+.wb-p-details__name {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.wb-p-details__follows__button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    padding: 0;
+}
+
+.wb-p-details__follows__button:hover {
+    background: none;
+    text-shadow: -0.025rem -0.012rem 0 currentcolor, .025rem .012rem currentcolor;
+}
+
+.wb-p-follow-item__avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wb-p-follow-item__name {
+    font-size: 14px;
+}
+
+.wb-p-details__bio {
+    text-align: center;
+    word-break: break-all;
+}
+
+@media(min-width: 576px) {
+    .wb-modal__container.edit-profile {
+        width: 567px;
+        min-height: 544px;
+    }
+
+    .wb-modal__container.follows {
+        width: 367px;
+        max-height: 80vh;
+    }
+
+    .wb-modal__container.codes {
+        width: 360px;
+        max-height: 80vh;
+    }
+
+    .wb-modal__container.console {
+        height: 923px;
+        max-height: 90vh;
+    }
+
+    .wb-modal__container.comments {
+        height: 796px;
+        max-height: 90vh;
+        position: relative;
+    }
+
+    .wb-p-details__bio {
+        text-align: left;
+    }
+}
+
+/*Webler home page*/
+
+.wb-home {
+    width: 100%;
+    height: 700px;
+    background-color: rgb(34, 34, 34);
+    color: aliceblue;
+}
+
+.wb-home .header p {
+    font-size: 60px;
+
+}
+
+
+.wb-home-why-wb {
+    width: 100%;
+    height: auto;
+    background-color: aliceblue;
+}
+
+
+.wb-home-why-wb img {
+    width: 100%;
+}
+
+
+/*Webler discuss page*/
+
+.wb-discuss-questions-list-page {
+    min-height: 100vh;
+}
+
+.wb-discuss-empty-questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 160px auto;
+}
+
+.wb-discuss-question__title {
+    word-break: break-word;
+    width: 80%;
+}
+
+.wb-home-why_wb_card {
+    border: none;
+    color: rgb(57, 57, 57);
+    box-shadow: 0px 0px 10px rgb(224, 224, 224);
+}
+
+.wb-home-why-wb img {
+    width: 100%;
+
+}
+
+.wb-home-platform_header {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    color: rgb(57, 57, 57);
+}
+
+.wb-home-perfect-platform {
+
+    width: 100%;
+    height: auto;
+
+}
+
+.wb-home-perfect-platform_card {
+    border: none;
+    box-shadow: 0px 0px 10px rgb(224, 224, 224);
+    color: rgb(64, 85, 104);
+    margin-bottom: 80px;
+
+}
+
 
 /* Webler Contact Page */
 
