@@ -53,7 +53,74 @@ body {
   --banner-text-dark: rgb(17, 17, 17);
   --banner-slogan-dark: #fcfcffaa;
   --banner-line-dark: linear-gradient(to right, #0ef5e2, #aa8efc);
-  --banner-text-shadow-dark: 0 0 10px #0ef5e2, 0 0 20px #aa8efc;
+  --banner-text-shadow-dark: 0 0 10px #0ef5e2, 0 0 20px #020107;
+  
+  /* card Light Mode */
+  --home-bg-light: linear-gradient(
+    135deg,
+    black,
+    rgb(239, 242, 248),
+    white,
+    rgb(181, 165, 165)
+  );
+
+  --home-card-bg-light: 
+    linear-gradient(
+      135deg,
+      rgba(220, 223, 225, 0.1),
+      rgba(218, 238, 247, 0.9),
+      rgba(158, 185, 239, 0.99),
+      rgba(246, 246, 250, 0.2)
+    ),
+    url("https://i.ibb.co/3y8RJBwL/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-1.png");
+
+  --home-card-title-light: #322267;
+  --home-card-text-light: #2e2e4b;
+  --home-card-btn-bg-light: #394447;
+  --home-card-btn-text-light: rgb(189, 189, 232);
+
+  /* Dark Mode */
+  --home-bg-dark: linear-gradient(
+    135deg,
+    #050505,
+    #0f1a1f,
+    #161616,
+    #1e1e2f
+  );
+
+  --home-card-bg-dark: 
+    linear-gradient(
+      135deg,
+      rgba(40, 42, 55, 0.85),
+      rgba(20, 24, 30, 0.95),
+      rgba(18, 22, 28, 0.98)
+    ),
+    url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
+
+  --home-card-title-dark: #c8c8ff;
+  --home-card-text-dark: #d9d9e6;
+  --home-card-btn-bg-dark: #22263a;
+  --home-card-btn-text-dark: #f0f0ff;
+
+  --section-bg: linear-gradient(135deg, rgba(120, 116, 136, 0.55), rgba(44, 100, 106, 0.55)),
+    url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
+  --form-bg: rgba(128, 127, 131, 0.9);
+  --form-color: #2a2a66;
+  --input-bg: #a7abb1;
+  --submit-bg: linear-gradient(145deg, #7e7ea5, #2b2d2d);
+  --submit-color: #111;
+  --link-color: #210c5c;
+  --footer-bg:    linear-gradient(90deg, rgba(246, 249, 249, 0.4), rgba(103, 126, 151, 0.3)),
+    url("https://i.ibb.co/fd970qyX/Blue-Modern-Futuristic-Technology-Presentation.jpg");
+  --footer-link-color: #27275e;
+  --footer-link-hover-gradient: linear-gradient(90deg, #84e156, #2d2b5b, #022b35);
+  --made-by-color: #33357b;
+  --made-by-gradient: linear-gradient(90deg, #0420bd, #38035f, #2302fb);
+  --heart-color: rgb(246, 51, 13);
+  --heart-shadow: 0 0 5px #3a1493;
+
+  /* -------- Dark Mode -------- */
+
 }
 
 
@@ -80,6 +147,22 @@ body.dark {
   --toggle-bg: white;
   --toggle-bg-hover: rgb(143,152,110);
   --toggle-color: orange;
+  --section-bg: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url("https://i.ibb.co/kVSx5r53/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-6.png");
+  --form-bg: rgba(1, 1, 12, 0.5);
+  --form-color: #e0e0f0;
+  --input-bg: rgba(220, 240, 240, 0.4);
+  --submit-bg: linear-gradient(145deg, #00c6ff, #0072ff);
+  --submit-color: #fff;
+  --link-color: #79c7ff;
+  --footer-bg: linear-gradient(135deg, rgba(0, 17, 17, 0.8), rgba(1, 7, 14, 0.99)),
+    url("https://i.ibb.co/fd970qyX/Blue-Modern-Futuristic-Technology-Presentation.jpg");
+  --footer-link-color: #c2c2c7;
+  --footer-link-hover-gradient: linear-gradient(90deg, #5fff84, #a36eff, #03fffb);
+  --made-by-color: #c3c3c5;
+  --made-by-gradient: linear-gradient(90deg, #6b42ff, #0fb2ff, #ff4ea1);
+  --heart-color: #ff4747;
+  --heart-shadow: 0 0 5px #ff9a00;
 }
 
 /* ================= Dark Mode Toggle Button ================= */
@@ -390,6 +473,7 @@ body.dark {
   min-height: 80vh;              
   overflow: hidden;
   text-align: start;
+  padding-left: 5vmin;
 }
 
 .wb-banner::before {
@@ -411,17 +495,6 @@ body.dark {
   background-position: center;
   background-size: cover;
 }
-.dark .wb-banner__text {
-  color: var(--banner-text-dark);
-  text-shadow:var(--banner-text-shadow-dark);
-}
-.dark .wb-banner__slogan {
-  color: var(--banner-slogan-dark);
-}
-.dark .wb-banner__content hr {
-  background: var(--banner-line-dark);
-}
-
 
 /* Logo & Banner Text */
 
@@ -435,6 +508,7 @@ body.dark {
 
 .wb-banner__logo__img {
     width: 350px;
+
 }
 
 .wb-banner__text {
@@ -442,17 +516,25 @@ body.dark {
   font-weight: 700;
   text-shadow:var(--banner-text-shadow-light);
   color: var(--banner-text-light);
-  padding-left: 5vmin;
+  margin-top: 2vmin;
+}
 
+.dark .wb-banner__text {
+  color: var(--banner-text-dark);
+  text-shadow:var(--banner-text-shadow-dark);
 }
 
 .wb-banner__content hr {
-  width: 50%;         
+  width: 100%;         
   margin: 0.5vmin auto;   
   border: none;         
   height: 2px;      
-  background: linear-gradient(to right, #0ef5e2, #aa8efc); /* gradient line */
+  background:var(--banner-line-light);
   border-radius: 1px;
+}
+
+.dark .wb-banner__content hr {
+  background: var(--banner-line-dark);
 }
 
 
@@ -462,12 +544,14 @@ body.dark {
   letter-spacing: 1px;
   color: var(--banner-slogan-light);
   font-weight: 500;
-  padding-left: 5vmin;
-  
+}
+
+.dark .wb-banner__slogan {
+  color: var(--banner-slogan-dark);
 }
 
 .spread {
-    height: 25vmin;
+    height: 21vmin;
     position: absolute;
     z-index: 1;
 }
@@ -483,7 +567,6 @@ body.dark {
 }
 
 /* individual offsets for duplicates */
-
 .wb-banner__memory__img.duplicate {
   top: calc(40% + 15px);
   right: calc(1% + 15px);
@@ -498,12 +581,12 @@ body.dark {
 
 .wb-banner__maximus__img.duplicate {
   top: calc(10% + 13px);
-  right: calc(25% + 13px);
+  right: calc(15% + 13px);
 }
 
 .wb-banner__maximus__img {
     top: 10%;
-    right: 25%;
+    right: 15%;
    
 }
 
@@ -530,11 +613,11 @@ body.dark {
 
 .wb-banner__code__img.duplicate {
   top: calc(50% + 10px);
-  right: calc(35% - 10px);
+  right: calc(5% - 10px);
 }
 .wb-banner__code__img {
     top: 50%;
-    right: 35%;
+    right: 5%;
 }
 
 .wb-banner__gemoku__img.duplicate {
@@ -552,19 +635,15 @@ body.dark {
 @media (max-width:768px) {
 
     .wb-banner__logo__img {
-        width: 330px;       
+        width: 300px;       
         max-width: 400px;  
         top: 25%;       
     }
 
     .wb-banner__text {
         font-size: 4vmin;
-        margin-top: 2vmin;
+        margin-top: 2.1vmin;
         margin-bottom: 0;
-    }
-
-    .wb-banner hr {
-        width: 90%;          
     }
 
     .wb-banner__slogan {
@@ -572,7 +651,7 @@ body.dark {
     }
 
     .spread {
-        height: 15vmin;
+        height: 18vmin;
         position: absolute;
         z-index: 1;
     }
@@ -587,26 +666,26 @@ body.dark {
     }
 
     .wb-banner__memory__img.duplicate {
-        top: calc(25% + 10px);
-        right: calc(-7% + 10px);
+        top: calc(75% + 10px);
+        right: calc(7% + 10px);
         transform: translateX(-50%) scale(1.05);
     }
 
     .wb-banner__memory__img {
-        top: 25%;
-        right: -7%;
+        top: 75%;
+        right: 7%;
         transform: translateX(-50%);
     }
 
     .wb-banner__maximus__img.duplicate {
-        top: calc(45% + 10px);
-        right: calc(16% + 10px);
+        top: calc(80% + 10px);
+        right: calc(6% + 10px);
         
     }
 
     .wb-banner__maximus__img {
-        top: 45%;
-        right: 16%;
+        top: 80%;
+        right: 6%;
     }
 
     .wb-banner__grotto__img.duplicate {
@@ -755,13 +834,17 @@ body.dark {
 }
 
 
-/* Features Section */
+/* ================= Home Section ================= */
 .wb-home-content {
   padding: 3rem 2rem;
-  background: linear-gradient(135deg,black,rgb(239, 242, 248),white,rgb(181, 165, 165));
- 
+  background: var(--home-bg-light);
 }
 
+.dark .wb-home-content {
+  background: var(--home-bg-dark);
+}
+
+/* Section Title */
 .wb-home-section-title {
   text-align: center;
   font-size: 2.5rem;
@@ -779,7 +862,6 @@ body.dark {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-
   animation: gradientMove 4s linear infinite;
 }
 
@@ -789,7 +871,7 @@ body.dark {
   100% { background-position: 0% 50%; }
 }
 
-
+/* ================= Home Cards ================= */
 .wb-home-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(280px, 400px));
@@ -798,23 +880,28 @@ body.dark {
 }
 
 .wb-home-card {
-    background:
-            linear-gradient(135deg, rgba(220, 223, 225, 0.1), rgba(218, 238, 247, 0.9),rgba(158, 185, 239, 0.99), rgba(246, 246, 250, 0.2)),
-            url("https://i.ibb.co/3y8RJBwL/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-1.png");
- background-position: start;
-  background-size: conver;
+  background: var(--home-card-bg-light);
+  background-position: center;
+  background-size: cover;
   border-radius: 20px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: rgb(46, 46, 75);
+  color: var(--home-card-text-light);
   border: none;
-
-  box-shadow:
+  box-shadow: 
     8px 8px 16px rgba(87, 101, 103, 0.8),  
-    -8px -8px 16px rgba(90, 87, 100, 0.7); 
+    -8px -8px 16px rgba(90, 87, 100, 0.7);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .wb-home-card {
+  background: var(--home-card-bg-dark);
+  color: var(--home-card-text-dark);
+  box-shadow: 
+    8px 8px 16px rgba(10, 10, 15, 0.8),
+    -8px -8px 16px rgba(25, 25, 40, 0.7);
 }
 
 .wb-home-card:hover {
@@ -824,13 +911,16 @@ body.dark {
     -12px -12px 20px rgba(62, 61, 88, 0.7);
 }
 
-
+/* ================= Card Title & Text ================= */
 .wb-home-card-title {
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #322267;
   font-weight: 700;
+  color: var(--home-card-title-light);
+}
+.dark .wb-home-card-title {
+  color: var(--home-card-title-dark);
 }
 
 .wb-home-card-text {
@@ -838,57 +928,75 @@ body.dark {
   line-height: 1.5;
 }
 
+/* ================= Card Button ================= */
 .wb-home-card-button {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background: #394447;
-  color: rgb(189, 189, 232);
+  background: var(--home-card-btn-bg-light);
+  color: var(--home-card-btn-text-light);
   font-weight: 700;
   text-decoration: none;
   text-align: center;
-  border-radius: 8px 3px 14px 0;  
+  border-radius: 8px 3px 14px 0;
   box-shadow: 
-    4px 4px 6px #01161a,   /* darker shadow */
+    4px 4px 6px #01161a,
     -4px -4px 6px #010813;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.wb-home-card-button:hover {
-  background: #323464;
-  transform: translateY(-3px);
-}
-
-/* Join Us Section */
-
-.wb-home-sign-up {
-    margin-top: 4rem; 
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    width: 100%;
- 
-}
-
-.wb-home-sign-up-form {
-    border-radius: 2vmin;
-}
-
-.wb-home-sign-up-form:hover {
-  transform: translateY(-5px);
+.dark .wb-home-card-button {
+  background: var(--home-card-btn-bg-dark);
+  color: var(--home-card-btn-text-dark);
   box-shadow: 
-    10px 10px 20px rgba(38, 40, 49, 0.7),
-    -10px -10px 20px rgba(59, 83, 86, 0.6);
+    4px 4px 6px #0a0a1a,
+    -4px -4px 6px #0e0e22;
 }
 
+.wb-home-card-button:hover {
+  transform: translateY(-3px);
+  background: #323464;
+}
+
+
+/* ========================
+   Join Us Section 
+======================== */
+
+/* 🔹 Section Layout */
+.wb-home-sign-up {
+  margin-top: 4rem; 
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  background: var(--section-bg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+}
+
+.form-p {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6vmin;
+    font-size: 5vmin;
+    color: var(--form-color);
+    
+
+}
+
+/* 🔹 Form Card */
 .wb-home-register {
-  background: rgba(200, 210, 230, 0.9);
+  background: var(--form-bg);
   padding: 2rem;
   border-radius: 2vmin;
   max-width: 500px;
   margin: 0 auto;
-  box-shadow: 8px 8px 16px rgba(150, 150, 200, 0.5), -8px -8px 16px rgba(255, 255, 255, 0.7);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.1);
   font-family: "Orbitron", sans-serif;
-  color: #262656;
+  color: var(--form-color);
+  transition: all 0.3s ease;
 }
 
 .wb-home-register__title {
@@ -897,6 +1005,7 @@ body.dark {
   margin-bottom: 1.5rem;
 }
 
+/* 🔹 Alert */
 .wb-home-register__alert {
   background: rgba(255, 100, 100, 0.2);
   color: #ff3333;
@@ -906,37 +1015,27 @@ body.dark {
   text-align: center;
 }
 
+/* 🔹 Inputs */
 .wb-home-register__form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.wb-home-register__label {
-  font-weight: 600;
-}
-
-.wb-home-register__input {
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  border: none;
-  background: #c6d0dd;
-  box-shadow: inset 6px 6px 12px rgba(150, 150, 200, 0.3), inset -6px -6px 12px rgba(255, 255, 255, 0.7);
-  font-size: 1rem;
-}
-
-
+.wb-home-register__input,
 .wb-home-register__input-password {
   padding: 0.75rem 1rem;
   border-radius: 12px;
   border: none;
-  background: #c6d0dd; 
-  box-shadow: inset 6px 6px 12px rgba(150, 150, 200, 0.3), inset -6px -6px 12px rgba(255, 255, 255, 0.7);
+  background: var(--input-bg);
+  box-shadow: inset 6px 6px 12px var(--input-shadow-dark), 
+              inset -6px -6px 12px var(--input-shadow-light);
   font-size: 1rem;
   width: 100%;
+  color: inherit;
 }
 
-
+/* 🔹 Captcha */
 .wb-home-register__captcha {
   display: flex;
   align-items: center;
@@ -952,29 +1051,32 @@ body.dark {
   height: 35px;
   border-radius: 50%;
   border: none;
-  background: #e0e5ec;
-  box-shadow: 4px 4px 8px rgba(150, 150, 200, 0.4), -4px -4px 8px rgba(255, 255, 255, 0.6);
+  background: var(--captcha-btn-bg);
+  box-shadow: 4px 4px 8px var(--captcha-btn-shadow-dark), 
+              -4px -4px 8px var(--captcha-btn-shadow-light);
   cursor: pointer;
   font-weight: bold;
 }
 
+/* 🔹 Submit */
 .wb-home-register__submit {
   padding: 0.75rem;
   border-radius: 15px;
   border: none;
-  background: linear-gradient(145deg, #3d3c7b, #35a79d);
-  color: #111;
+  background: var(--submit-bg);
+  color: var(--submit-color);
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 4px 4px 8px rgba(0, 200, 255, 0.4), -4px -4px 8px rgba(200, 255, 255, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .wb-home-register__submit:hover {
   transform: translateY(-3px);
-  box-shadow: 6px 6px 12px rgba(0, 200, 255, 0.6), -6px -6px 12px rgba(200, 255, 255, 0.7);
+  box-shadow: 6px 6px 12px rgba(0, 200, 255, 0.6), 
+              -6px -6px 12px rgba(200, 255, 255, 0.7);
 }
 
+/* 🔹 Extra Links */
 .wb-home-register__text {
   text-align: center;
   margin-top: 1rem;
@@ -983,7 +1085,7 @@ body.dark {
 .wb-home-register__link {
   background: none;
   border: none;
-  color: #210c5c;
+  color: var(--link-color);
   font-weight: 700;
   cursor: pointer;
   text-decoration: underline;
@@ -998,10 +1100,8 @@ body.dark {
   width: 100%;
   overflow: hidden;
   text-align: center;
-  padding:4vmin 0 2vmin 0;
-  background:
-    linear-gradient(90deg, rgba(246, 249, 249, 0.4), rgba(103, 126, 151, 0.3)),
-    url("https://i.ibb.co/fd970qyX/Blue-Modern-Futuristic-Technology-Presentation.jpg");
+  padding:1vmin 0;
+  background:var(--footer-bg);
   background-size: cover;
   background-position: start;
   border-top: 2px dotted rgb(117, 161, 250);
@@ -1025,63 +1125,56 @@ body.dark {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding:0 1rem;
+  padding: 0 1rem;
   position: relative;
   z-index: 1;
+
 }
 
-
+/* Footer Links */
 .wb-home-footer a {
   text-decoration: none;
   transition: all 0.3s ease;
-  border-radius:0.2vmin 0.9vmin;
-  color: #27275e;
+  border-radius: 0.2vmin 0.9vmin;
+  color: var(--footer-link-color);
   position: relative;
   z-index: 1;
-  padding:0.3vmin 0.5vmin ;
+  padding: 0.3vmin 0.5vmin;
   font-weight: 700;
 }
 
-
 .wb-home-footer a:hover {
   transform: translateY(-3px) scale(1.1);
-  background: linear-gradient(90deg, #84e156, #2d2b5b, #022b35);
+  background: var(--footer-link-hover-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   text-shadow: 3px 3px 6px rgba(0,0,0,0.5), 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-
+/* Made By Section */
 .wb-made-by {
-  color: #33357b;
+  color: var(--made-by-color);
   font-weight: bolder;
-  margin:2vmin 0 1vmin 0;
+  margin: 2vmin 0 2vmin 0;
 }
 
 .wb-made-by b {
-  background: linear-gradient(90deg, #0420bd, #38035f, #2302fb);
+  background: var(--made-by-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-
+/* Heartbeat Animation */
 @keyframes heartbeat {
-  0%, 40%, 100% {
-    transform: scale(1);
-  }
-  20%, 60% {
-    transform: scale(1.2)
-    
-  }
+  0%, 40%, 100% { transform: scale(1); }
+  20%, 60% { transform: scale(1.2); }
 }
 
 .red-heart {
   margin: 0 0.2rem;
-  color:rgb(246, 51, 13);
+  color: var(--heart-color);
   vertical-align: middle;
-  text-shadow: 0 0 5px #31f705;
-
+  text-shadow: var(--heart-shadow);
   animation: heartbeat 1.3s infinite;
   transition: transform 0.3s ease;
 }

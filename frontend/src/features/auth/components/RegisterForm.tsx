@@ -64,6 +64,7 @@ const RegisterForm = ({ onToggleClick, onRegister }: RegisterFormProps) => {
         <input
           className="wb-home-register__input"
           type="email"
+          placeholder="example@gmail.com"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -73,6 +74,7 @@ const RegisterForm = ({ onToggleClick, onRegister }: RegisterFormProps) => {
         <input
           className="wb-home-register__input"
           type="text"
+          placeholder="Won Bin"
           minLength={3}
           maxLength={20}
           required

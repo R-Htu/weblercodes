@@ -57,12 +57,20 @@ function Home() {
           <h1 className="wb-banner__text">Software Engineering</h1>
           <hr />
           <p className="wb-banner__slogan">
-            -Building the future, one code at a time
+            -Building the futu
+            re, one code at a time
           </p>
         </div>
 
         {/* Banner images */}
         <div className="wb-image-wrappers">
+
+          {/* Memory */}
+          <a href="https://www.weblercodes.com/Compiler-Playground/68c497d092e463503d8d413f" target="_blank" className="banner-img-wrapper">
+            <img className="wb-banner__memory__img spread duplicate" src="https://i.ibb.co/kgdBzbpk/IMG-8872.jpg" alt="memory leak" />
+            <img className="wb-banner__memory__img spread" src="https://i.ibb.co/kgdBzbpk/IMG-8872.jpg" alt="memory leak" />
+          </a>
+
           {/* Maximus */}
           <a href="https://www.weblercodes.com/Compiler-Playground/68cb67d00ca13b2e001a0f66" target="_blank" className="banner-img-wrapper">
             <img className="wb-banner__maximus__img spread duplicate" src="https://i.ibb.co/q3JmHSHX/IMG-8870.jpg" alt="maximus bombasticus" />
@@ -73,12 +81,6 @@ function Home() {
           <a href="https://www.weblercodes.com/Compiler-Playground/68ca697f0ca13b2e0019f5d4" target="_blank" className="banner-img-wrapper">
             <img className="wb-banner__gemoku__img spread duplicate" src="https://i.ibb.co/20TMCWP8/IMG-8871.jpg" alt="gemoku ttt" />
             <img className="wb-banner__gemoku__img spread" src="https://i.ibb.co/20TMCWP8/IMG-8871.jpg" alt="gemoku ttt" />
-          </a>
-
-          {/* Memory */}
-          <a href="https://www.weblercodes.com/Compiler-Playground/68c497d092e463503d8d413f" target="_blank" className="banner-img-wrapper">
-            <img className="wb-banner__memory__img spread duplicate" src="https://i.ibb.co/kgdBzbpk/IMG-8872.jpg" alt="memory leak" />
-            <img className="wb-banner__memory__img spread" src="https://i.ibb.co/kgdBzbpk/IMG-8872.jpg" alt="memory leak" />
           </a>
 
           {/* Grotto */}
@@ -142,6 +144,7 @@ function Home() {
         {!userInfo && (
           <div className="wb-home-sign-up">
             <div className="wb-home-sign-up-form">
+              <p className="form-p">Join us right now!</p>
               {isRegisterForm ? (
                 <RegisterForm
                   onRegister={() => navigate("/Profile")}
