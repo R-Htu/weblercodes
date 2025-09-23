@@ -69,18 +69,6 @@ function Home() {
           {/* Banner images */}
         <div className="wb-image-wrappers">
 
-          {/* Memory */}
-          <a href="https://www.weblercodes.com/Compiler-Playground/68c497d092e463503d8d413f" target="_blank" className="banner-img-wrapper">
-            <img className="wb-banner__memory__img spread duplicate" src="https://i.ibb.co/kgdBzbpk/IMG-8872.jpg" alt="memory leak" />
-            <img className="wb-banner__memory__img spread" src="https://i.ibb.co/kgdBzbpk/IMG-8872.jpg" alt="memory leak" />
-          </a>
-
-          {/* Maximus */}
-          <a href="https://www.weblercodes.com/Compiler-Playground/68cb67d00ca13b2e001a0f66" target="_blank" className="banner-img-wrapper">
-            <img className="wb-banner__maximus__img spread duplicate" src="https://i.ibb.co/q3JmHSHX/IMG-8870.jpg" alt="maximus bombasticus" />
-            <img className="wb-banner__maximus__img spread" src="https://i.ibb.co/q3JmHSHX/IMG-8870.jpg" alt="maximus bombasticus" />
-          </a>
-
           {/* Gemoku */}
           <a href="https://www.weblercodes.com/Compiler-Playground/68ca697f0ca13b2e0019f5d4" target="_blank" className="banner-img-wrapper">
             <img className="wb-banner__gemoku__img spread duplicate" src="https://i.ibb.co/20TMCWP8/IMG-8871.jpg" alt="gemoku ttt" />
@@ -99,38 +87,60 @@ function Home() {
             <img className="wb-banner__quiz__img spread" src="https://i.ibb.co/tTSt9bHR/IMG-8876.jpg" alt="quiz" />
           </a>
 
-          {/* Code */}
-          <a href="https://www.weblercodes.com/Compiler-Playground/68b7d2c2486619aaa9bb9938" target="_blank" className="banner-img-wrapper">
-            <img className="wb-banner__code__img spread duplicate" src="https://i.ibb.co/bj1y1NLQ/IMG-8875.jpg" alt="code" />
-            <img className="wb-banner__code__img spread" src="https://i.ibb.co/bj1y1NLQ/IMG-8875.jpg" alt="code" />
-          </a>
+         
         </div>
         <div className="wb-home-cards">
           <div className="wb-home-card">
-            <h3 className="wb-home-card-title">Playground</h3>
-            <p className="wb-home-card-text">
-              Create, edit, and run code in multiple programming languages — all within your browser. Our web-based IDE is perfect for testing ideas, learning syntax, or building small projects without any setup.
-            </p>
-            <Link to="/Codes" className="wb-home-card-button">Go to Playground</Link>
+            <div className="wb-home-card-playground">
+               <h3 className="wb-home-card-title">Playground</h3>
+               <p className="wb-home-card-text">
+                  Create, edit, and run code in multiple programming languages — all within your browser. Our web-based IDE is perfect for testing ideas, learning syntax, or building small projects without any setup.
+                </p>
+                <Link to="/Codes" className="wb-home-card-button">Go to Playground</Link>
+                       {/* Memory */}
+                <a href="https://www.weblercodes.com/Compiler-Playground/68c497d092e463503d8d413f" target="_blank" className="banner-img-wrapper">
+                  <img className="wb-banner__memory__img spread duplicate" src="https://i.ibb.co/kgdBzbpk/IMG-8872.jpg" alt="memory leak" />
+                  <img className="wb-banner__memory__img spread" src="https://i.ibb.co/kgdBzbpk/IMG-8872.jpg" alt="memory leak" />
+                </a>
+            </div>
+           
           </div>
 
           <div className="wb-home-card">
-            <h3 className="wb-home-card-title">Community Feed</h3>
-            <p className="wb-home-card-text">
-              Stay connected with the Webler community! The Feed lets you see the latest project updates, shared snippets, discussions, and highlights from developers around the world.
-            </p>
-            <Link to="/Feed" className="wb-home-card-button">Check Feed</Link>
+            <div className="wb-home-card-feed">
+              <h3 className="wb-home-card-title">Community Feed</h3>
+              <p className="wb-home-card-text">
+                Stay connected with the Webler community! The Feed lets you see the latest project updates, shared snippets, discussions, and highlights from developers around the world.
+              </p>
+              <Link to="/Feed" className="wb-home-card-button">Check Feed</Link>
+               {/* Code */}
+              <a href="https://www.weblercodes.com/Compiler-Playground/68b7d2c2486619aaa9bb9938" target="_blank" className="banner-img-wrapper">
+                <img className="wb-banner__code__img spread duplicate" src="https://i.ibb.co/bj1y1NLQ/IMG-8875.jpg" alt="code" />
+                <img className="wb-banner__code__img spread" src="https://i.ibb.co/bj1y1NLQ/IMG-8875.jpg" alt="code" />
+              </a>
+              </div>
+            
           </div>
 
           <div className="wb-home-card">
-            <h3 className="wb-home-card-title">Courses</h3>
+            <div className="wb-home-card-courses">
+                          <h3 className="wb-home-card-title">Courses</h3>
             <p className="wb-home-card-text">
               Learn by doing with our interactive courses! Each one includes hands-on content, quizzes, and coding tasks to help you master web technologies, programming languages, and software tools at your own pace.
             </p>
             <Link to="/Courses" className="wb-home-card-button">Explore Courses</Link>
+                      {/* Maximus */}
+            <a href="https://www.weblercodes.com/Compiler-Playground/68cb67d00ca13b2e001a0f66" target="_blank" className="banner-img-wrapper">
+              <img className="wb-banner__maximus__img spread duplicate" src="https://i.ibb.co/q3JmHSHX/IMG-8870.jpg" alt="maximus bombasticus" />
+              <img className="wb-banner__maximus__img spread" src="https://i.ibb.co/q3JmHSHX/IMG-8870.jpg" alt="maximus bombasticus" />
+            </a>
+            </div>
           </div>
 
           <div className="wb-home-card">
+            <div className="wb-home-card-qanda">
+              
+            </div>
             <h3 className="wb-home-card-title">Q&A Forum</h3>
             <p className="wb-home-card-text">
               Have a question about code or tech? Join our community-driven forum to ask, answer, and explore real-world programming problems. It’s a place to learn, share knowledge, and grow together.
