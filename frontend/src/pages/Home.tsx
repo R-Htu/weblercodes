@@ -50,7 +50,7 @@ function Home() {
           <div className="wb-banner__logo">
             <img
               className="wb-banner__logo__img"
-              src="https://i.ibb.co/d02XhwzH/weblerlogocropwithwhitepupple.png"
+              src="https://i.ibb.co/srxQfdm/pepperwclogo.png"
               alt="logo"
             />
           </div>
@@ -61,8 +61,12 @@ function Home() {
             re, one code at a time
           </p>
         </div>
+      </div>
 
-        {/* Banner images */}
+      {/* Info Section */}
+      <section className="wb-home-content">
+        <h2 className="wb-home-section-title">Explore Features</h2>
+          {/* Banner images */}
         <div className="wb-image-wrappers">
 
           {/* Memory */}
@@ -101,11 +105,6 @@ function Home() {
             <img className="wb-banner__code__img spread" src="https://i.ibb.co/bj1y1NLQ/IMG-8875.jpg" alt="code" />
           </a>
         </div>
-      </div>
-
-      {/* Info Section */}
-      <section className="wb-home-content">
-        <h2 className="wb-home-section-title">Explore Features</h2>
         <div className="wb-home-cards">
           <div className="wb-home-card">
             <h3 className="wb-home-card-title">Playground</h3>

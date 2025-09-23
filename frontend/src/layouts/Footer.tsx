@@ -49,7 +49,7 @@ function Footer() {
         r: Math.random() * 3 + 1,
         dx: (Math.random() - 0.5) * 0.6,
         dy: (Math.random() - 0.5) * 0.6,
-        color: `hsla(${Math.random() * 360}, 100%, 70%, 0.8)`,
+        color: `hsla(${Math.random() * 360}, 70%, 70%, 0.1)`,
       });
     }
 

@@ -1,3 +1,4 @@
+
 /* ================= Base Reset ================= */
 *,
 *::before,
@@ -19,8 +20,8 @@ body {
   --background: #ffffff;
   --text-color: #333;
   --header-bg: 
-    linear-gradient(45deg, rgba(237, 237, 249, 0.7), rgba(252,243,243,0.85)),
-    url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
+	linear-gradient(45deg, rgba(237, 237, 249, 0.7), rgba(252,243,243,0.85)),
+	url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
   --nav-link-color: #33357b;
   --nav-link-hover: blue;
   --nav-link-underline: #8e92f7;
@@ -38,41 +39,49 @@ body {
 
   /* Banner Light Mode Colors */
   --banner-bg-light: 
-    linear-gradient(135deg, rgba(220, 248, 255, 0.7), rgba(1, 14, 14, 1),rgba(15, 16, 17, 0.9),rgba(0, 0, 9, 0.99),rgba(242, 242, 254, 0.4),rgba(178, 178, 186, 0.6), rgba(248, 235, 235,0.4)),
-    url("https://i.ibb.co/3y8RJBwL/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-1.png");
-  --banner-text-light: #363e8a;
-  --banner-slogan-light: #f4feff;
-  --banner-line-light: linear-gradient(to right, #5ec1ff, #ff8efc);
-  --banner-text-shadow-light: 0 0 10px #00d9ff, 0 0 20px #f3f1fb;
+  url("https://i.ibb.co/PvgwpCK5/finallbg.png"),
+     linear-gradient(135deg, rgba(8, 8, 8, 0.99), rgba(255, 255, 255, 0.05));
+
+  --banner-text-light: #000105;
+  --banner-slogan-light: #0e0e0e;
+  --banner-line-light: linear-gradient(to right, #5ec1ff, #073aaf);
+  --banner-text-shadow-light: 0 0 10px #2c07c0, 0 0 20px #f3f1fb;
 
 
   /* -------- Dark Mode -------- */
-  --banner-bg-dark: 
-    linear-gradient(135deg, rgba(0, 0, 4, 0.7), rgba(0,0,0,0.95), rgba(38,40,40,0.99), rgba(146,149,155,0.69), rgba(0,0,11,0.9)),
-    url("https://i.ibb.co/3y8RJBwL/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-1.png");
-  --banner-text-dark: rgb(17, 17, 17);
+--banner-bg-dark: 
+  radial-gradient(
+    circle at center,
+    rgba(60, 60, 255, 0.2),   /* soft white glow in middle */
+    rgba(25, 25, 25, 0.9),    /* fades into darker edge */
+    rgba(0, 0, 0, 0.6)
+  ),
+  url("https://i.ibb.co/PvgwpCK5/finallbg.png");
+
+
+  --banner-text-dark: rgb(236, 229, 229);
   --banner-slogan-dark: #fcfcffaa;
   --banner-line-dark: linear-gradient(to right, #0ef5e2, #aa8efc);
-  --banner-text-shadow-dark: 0 0 10px #0ef5e2, 0 0 20px #020107;
+  --banner-text-shadow-dark: 0 0 10px rgb(2, 192, 240), 0 0 20px #290383;
   
   /* card Light Mode */
   --home-bg-light: linear-gradient(
-    135deg,
-    black,
-    rgb(239, 242, 248),
-    white,
-    rgb(181, 165, 165)
+	135deg,
+	black,
+	rgb(239, 242, 248),
+	white,
+	rgb(181, 165, 165)
   );
 
   --home-card-bg-light: 
-    linear-gradient(
-      135deg,
-      rgba(220, 223, 225, 0.1),
-      rgba(218, 238, 247, 0.9),
-      rgba(158, 185, 239, 0.99),
-      rgba(246, 246, 250, 0.2)
-    ),
-    url("https://i.ibb.co/3y8RJBwL/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-1.png");
+	linear-gradient(
+	  135deg,
+	  rgba(220, 223, 225, 0.1),
+	  rgba(218, 238, 247, 0.9),
+	  rgba(158, 185, 239, 0.99),
+	  rgba(246, 246, 250, 0.2)
+	),
+	url("https://i.ibb.co/3y8RJBwL/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-1.png");
 
   --home-card-title-light: #322267;
   --home-card-text-light: #2e2e4b;
@@ -81,21 +90,21 @@ body {
 
   /* Dark Mode */
   --home-bg-dark: linear-gradient(
-    135deg,
-    #050505,
-    #0f1a1f,
-    #161616,
-    #1e1e2f
+	135deg,
+	#050505,
+	#0f1a1f,
+	#161616,
+	#1e1e2f
   );
 
   --home-card-bg-dark: 
-    linear-gradient(
-      135deg,
-      rgba(40, 42, 55, 0.85),
-      rgba(20, 24, 30, 0.95),
-      rgba(18, 22, 28, 0.98)
-    ),
-    url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
+	linear-gradient(
+	  135deg,
+	  rgba(40, 42, 55, 0.85),
+	  rgba(20, 24, 30, 0.95),
+	  rgba(18, 22, 28, 0.98)
+	),
+	url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
 
   --home-card-title-dark: #c8c8ff;
   --home-card-text-dark: #d9d9e6;
@@ -103,21 +112,27 @@ body {
   --home-card-btn-text-dark: #f0f0ff;
 
   --section-bg: linear-gradient(135deg, rgba(120, 116, 136, 0.55), rgba(44, 100, 106, 0.55)),
-    url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
+	url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
   --form-bg: rgba(128, 127, 131, 0.9);
   --form-color: #2a2a66;
-  --input-bg: #a7abb1;
+  --input-bg: #c6d0dd;
+  --input-shadow-dark: inset 6px 6px 12px rgba(150, 150, 200, 0.3);
+  --input-shadow-light: inset -6px -6px 12px rgba(255, 255, 255, 0.7);
+  --captcha-btn-bg: #dcdcf1;
+  --captcha-btn-shadow-dark: 4px 4px 8px rgba(170, 170, 179, 0.3);
+  --captcha-btn-shadow-light: -4px -4px 8px rgba(133, 122, 149, 0.2);
   --submit-bg: linear-gradient(145deg, #7e7ea5, #2b2d2d);
   --submit-color: #111;
   --link-color: #210c5c;
-  --footer-bg:    linear-gradient(90deg, rgba(246, 249, 249, 0.4), rgba(103, 126, 151, 0.3)),
-    url("https://i.ibb.co/fd970qyX/Blue-Modern-Futuristic-Technology-Presentation.jpg");
+  --footer-bg:	linear-gradient(90deg, rgba(246, 249, 249, 0.4), rgba(103, 126, 151, 0.3)),
+	url("https://i.ibb.co/fd970qyX/Blue-Modern-Futuristic-Technology-Presentation.jpg");
   --footer-link-color: #27275e;
   --footer-link-hover-gradient: linear-gradient(90deg, #84e156, #2d2b5b, #022b35);
   --made-by-color: #33357b;
   --made-by-gradient: linear-gradient(90deg, #0420bd, #38035f, #2302fb);
   --heart-color: rgb(246, 51, 13);
   --heart-shadow: 0 0 5px #3a1493;
+  --footer-border-top-color:rgba(233,233,233,0.7);
 
   /* -------- Dark Mode -------- */
 
@@ -129,9 +144,9 @@ body.dark {
   --background: #220000;
   --text-color: #e3e2ea;
   --header-bg: 
-    radial-gradient(circle at 70% center, rgba(73,72,70,0.5) 0%, rgba(1,14,16,0.2) 30%, rgba(12,13,14,0.9) 100%),
-    linear-gradient(45deg, rgb(0,0,0), rgba(4,26,28,0.8), rgba(0,6,6,0.9)),
-    url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
+	radial-gradient(circle at 70% center, rgba(73,72,70,0.5) 0%, rgba(1,14,16,0.2) 30%, rgba(12,13,14,0.9) 100%),
+	linear-gradient(45deg, rgb(0,0,0), rgba(4,26,28,0.8), rgba(0,6,6,0.9)),
+	url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
   --nav-link-color: white;
   --nav-link-hover: #4b4c89;
   --nav-link-underline: #86abd7;
@@ -148,15 +163,20 @@ body.dark {
   --toggle-bg-hover: rgb(143,152,110);
   --toggle-color: orange;
   --section-bg: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
-    url("https://i.ibb.co/kVSx5r53/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-6.png");
+	url("https://i.ibb.co/kVSx5r53/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-6.png");
   --form-bg: rgba(1, 1, 12, 0.5);
   --form-color: #e0e0f0;
-  --input-bg: rgba(220, 240, 240, 0.4);
-  --submit-bg: linear-gradient(145deg, #00c6ff, #0072ff);
+  --input-bg: #49495a;
+  --input-shadow-dark: inset 6px 6px 12px rgba(0, 0, 0, 0.5);
+  --input-shadow-light: inset -6px -6px 12px rgba(100, 100, 150, 0.2);
+  --captcha-btn-bg:  #49495a;
+  --captcha-btn-shadow-dark: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  --captcha-btn-shadow-light: -4px -4px 8px rgba(255, 255, 255, 0.1);
+  --submit-bg: linear-gradient(145deg, #201042, #412567);
   --submit-color: #fff;
-  --link-color: #79c7ff;
+  --link-color: #2c096c;
   --footer-bg: linear-gradient(135deg, rgba(0, 17, 17, 0.8), rgba(1, 7, 14, 0.99)),
-    url("https://i.ibb.co/fd970qyX/Blue-Modern-Futuristic-Technology-Presentation.jpg");
+	url("https://i.ibb.co/fd970qyX/Blue-Modern-Futuristic-Technology-Presentation.jpg");
   --footer-link-color: #c2c2c7;
   --footer-link-hover-gradient: linear-gradient(90deg, #5fff84, #a36eff, #03fffb);
   --made-by-color: #c3c3c5;
@@ -205,16 +225,12 @@ body.dark {
 }
 
 .wb-home-header .logo img {
-  max-height: 120px; 
-  width: auto;      
-  display: block;
+   width: 100px;
 }
 
 .wb-home-header .right-side {
-  flex: 1; 
   display: flex;
   align-items: center;
-  justify-content: flex-end; 
   gap: 2rem;
 }
 
@@ -288,66 +304,66 @@ body.dark {
 /* ================= Mobile Responsive ================= */
 @media (max-width: 768px) {
   .wb-home-header .right-side {
-    flex-direction: row; 
-    justify-content: space-around;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    gap: 1rem;
-    background: var(--header-bg);
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 0 2rem; 
-    border-top: 2px dotted #86abd7;
-    border-bottom: 2px dotted #86abd7;
-    transform: translateY(-20px); 
-    opacity: 0;
-    transition: all 0.3s ease;
+	flex-direction: row; 
+	justify-content: space-around;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	gap: 1rem;
+	background: var(--header-bg);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding: 0 2rem; 
+	border-top: 2px dotted #86abd7;
+	border-bottom: 2px dotted #86abd7;
+	transform: translateY(-20px); 
+	opacity: 0;
+	transition: all 0.3s ease;
   }
 
 .dark-mode-toggle {
-    width: 5vmin;
-    height: 5vmin;
-    font-size: 5vmin;
+	width: 5vmin;
+	height: 5vmin;
+	font-size: 5vmin;
 
 }
 
 .wb-home-header .right-side.open {
-    display: flex;
-    max-height: 500px; 
-    transform: translateY(0); 
-    opacity: 1;
-    padding: 1rem 2rem;
+	display: flex;
+	max-height: 500px; 
+	transform: translateY(0); 
+	opacity: 1;
+	padding: 1rem 2rem;
 }
 
   .wb-home-header .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-    width: 30%;
-    background: transparent;
-    position: relative;
-    padding: 0;
+	flex-direction: column;
+	gap: 1rem;
+	width: 30%;
+	background: transparent;
+	position: relative;
+	padding: 0;
  }
 
   .wb-home-header .nav-links a::after {
-     display: none;
+	 display: none;
   }
 
   .hamburger {
-    display: flex;
+	display: flex;
   }
 }
 
 @media (max-width: 468px) {
-    .dark-mode-toggle {
-        width: 6.5vmin;
-        height: 6.5vmin;
-        font-size: 5vmin;
+	.dark-mode-toggle {
+		width: 6.5vmin;
+		height: 6.5vmin;
+		font-size: 5vmin;
 
-    }
+	}
 }
 
 /* ================= Auth Navigation ================= */
@@ -469,11 +485,9 @@ body.dark {
 }
 
 .wb-banner {
-  position: relative;
-  min-height: 80vh;              
+  position: relative;		  
   overflow: hidden;
-  text-align: start;
-  padding-left: 5vmin;
+  height: 100vh;
 }
 
 .wb-banner::before {
@@ -484,30 +498,31 @@ body.dark {
   width: 100%;
   height: 100%;
   background:var(--banner-bg-light);
- background-position: center;
-  background-size: conver;
+  background-size: cover;
   z-index: -2;
 }
 
 /* Dark Mode */
 .dark .wb-banner::before {
-  background: var(--banner-bg-dark);
-  background-position: center;
-  background-size: cover;
+    background: var(--banner-bg-dark);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
 /* Logo & Banner Text */
 
 .wb-banner__content{
    display: flex;
    flex-direction: column;
    justify-content: center;
-   position: absolute;
-   top: 20%;
+   align-items: center;
+   height: 100%;
+   width: 100%;
+  /* background: url("https://i.ibb.co/PZ2H75Mq/lightbawithwc.png");*/
 }
 
 .wb-banner__logo__img {
-    width: 350px;
+	width: 350px;
 
 }
 
@@ -525,10 +540,10 @@ body.dark {
 }
 
 .wb-banner__content hr {
-  width: 100%;         
+  width: 100%;		 
   margin: 0.5vmin auto;   
-  border: none;         
-  height: 2px;      
+  border: none;		 
+  height: 2px;	  
   background:var(--banner-line-light);
   border-radius: 1px;
 }
@@ -551,9 +566,9 @@ body.dark {
 }
 
 .spread {
-    height: 21vmin;
-    position: absolute;
-    z-index: 1;
+	height: 21vmin;
+	position: absolute;
+	z-index: 1;
 }
 
 /* duplicate behind main image */
@@ -574,9 +589,9 @@ body.dark {
 }
 
 .wb-banner__memory__img {
-    top: 40%;
-    right: 1%;
-    transform: translateX(-50%);
+	top: 40%;
+	right: 1%;
+	transform: translateX(-50%);
 }
 
 .wb-banner__maximus__img.duplicate {
@@ -585,8 +600,8 @@ body.dark {
 }
 
 .wb-banner__maximus__img {
-    top: 10%;
-    right: 15%;
+	top: 10%;
+	right: 15%;
    
 }
 
@@ -596,8 +611,8 @@ body.dark {
 }
 
 .wb-banner__quiz__img {
-    top: 20%;
-    right: 8%;
+	top: 20%;
+	right: 8%;
   
 }
 
@@ -607,8 +622,8 @@ body.dark {
 }
 
 .wb-banner__grotto__img {
-    top: 68%;
-    right: 20%;
+	top: 68%;
+	right: 20%;
 }
 
 .wb-banner__code__img.duplicate {
@@ -616,8 +631,8 @@ body.dark {
   right: calc(5% - 10px);
 }
 .wb-banner__code__img {
-    top: 50%;
-    right: 5%;
+	top: 50%;
+	right: 5%;
 }
 
 .wb-banner__gemoku__img.duplicate {
@@ -626,210 +641,207 @@ body.dark {
 }
 
 .wb-banner__gemoku__img {
-    top: 66%;
-    right: 10%; 
+	top: 66%;
+	right: 10%; 
 }
 
 /*Wb banner responsive  */
 
 @media (max-width:768px) {
+	.wb-banner__logo__img {
+		width: 300px;	   
+	   
+	}
 
-    .wb-banner__logo__img {
-        width: 300px;       
-        max-width: 400px;  
-        top: 25%;       
-    }
+	.wb-banner__text {
+		font-size: 4vmin;
+		margin-top: 2.1vmin;
+		margin-bottom: 0;
+	}
 
-    .wb-banner__text {
-        font-size: 4vmin;
-        margin-top: 2.1vmin;
-        margin-bottom: 0;
-    }
+	.wb-banner__slogan {
+		font-size: 3vmin;  
+	}
 
-    .wb-banner__slogan {
-        font-size: 3vmin;  
-    }
+	.spread {
+		height: 18vmin;
+		position: absolute;
+		z-index: 1;
+	}
 
-    .spread {
-        height: 18vmin;
-        position: absolute;
-        z-index: 1;
-    }
+	.spread.duplicate {
+		position: absolute;
+		transform: scale(1.05);
+		filter: blur(-4px);
+		opacity: 0.45;
+		z-index: 0;
+		pointer-events: none;
+	}
 
-    .spread.duplicate {
-        position: absolute;
-        transform: scale(1.05);
-        filter: blur(-4px);
-        opacity: 0.45;
-        z-index: 0;
-        pointer-events: none;
-    }
+	.wb-banner__memory__img.duplicate {
+		top: calc(75% + 10px);
+		right: calc(7% + 10px);
+		transform: translateX(-50%) scale(1.05);
+	}
 
-    .wb-banner__memory__img.duplicate {
-        top: calc(75% + 10px);
-        right: calc(7% + 10px);
-        transform: translateX(-50%) scale(1.05);
-    }
+	.wb-banner__memory__img {
+		top: 75%;
+		right: 7%;
+		transform: translateX(-50%);
+	}
 
-    .wb-banner__memory__img {
-        top: 75%;
-        right: 7%;
-        transform: translateX(-50%);
-    }
+	.wb-banner__maximus__img.duplicate {
+		top: calc(80% + 10px);
+		right: calc(6% + 10px);
+		
+	}
 
-    .wb-banner__maximus__img.duplicate {
-        top: calc(80% + 10px);
-        right: calc(6% + 10px);
-        
-    }
+	.wb-banner__maximus__img {
+		top: 80%;
+		right: 6%;
+	}
 
-    .wb-banner__maximus__img {
-        top: 80%;
-        right: 6%;
-    }
+	.wb-banner__grotto__img.duplicate {
+		top: calc(42% + 10px);
+		right: calc(4% - 10px);
+	}
 
-    .wb-banner__grotto__img.duplicate {
-        top: calc(42% + 10px);
-        right: calc(4% - 10px);
-    }
+	.wb-banner__grotto__img {
+		top: 42%;
+		right: 4%;
+	}
 
-    .wb-banner__grotto__img {
-        top: 42%;
-        right: 4%;
-    }
+	.wb-banner__quiz__img.duplicate {
+		top: calc(60% + 10px);
+		right: calc(10% - 10px);
+	}
 
-    .wb-banner__quiz__img.duplicate {
-        top: calc(60% + 10px);
-        right: calc(10% - 10px);
-    }
+	.wb-banner__quiz__img {
+		top: 60%;
+		right: 10%;
+	}
 
-    .wb-banner__quiz__img {
-        top: 60%;
-        right: 10%;
-    }
+	.wb-banner__code__img.duplicate {
+		top: calc(70% + 10px);
+		right: calc(3% - 10px);
+	}
+	.wb-banner__code__img {
+		top: 70%;
+		right: 3%;
+	}
 
-    .wb-banner__code__img.duplicate {
-        top: calc(70% + 10px);
-        right: calc(3% - 10px);
-    }
-    .wb-banner__code__img {
-        top: 70%;
-        right: 3%;
-    }
+	.wb-banner__gemoku__img.duplicate {
+		top: calc(70% + 10px);
+		right: calc(17% + 10px);
+	}
 
-    .wb-banner__gemoku__img.duplicate {
-        top: calc(70% + 10px);
-        right: calc(17% + 10px);
-    }
-
-    .wb-banner__gemoku__img {
-        top: 70%;
-        right: 17%; 
-    }
+	.wb-banner__gemoku__img {
+		top: 70%;
+		right: 17%; 
+	}
 
 }
 
 @media (max-width:480px) {
 
-    .wb-banner__content{
-        top: 25%;
-    }
+	.wb-banner__content{
+		top: 25%;
+	}
 
-    .wb-banner__logo__img {
-        width: 230px;         
-        top: 30%;       
-    }
+	.wb-banner__logo__img {
+		width: 230px;		 
+		top: 30%;	   
+	}
 
-    .wb-banner__text {
-        font-size: 5vmin;
-    }
+	.wb-banner__text {
+		font-size: 5vmin;
+	}
 
-    .wb-banner hr {
-        width: 90%;          
-        }
+	.wb-banner hr {
+		width: 90%;		  
+		}
 
-    .wb-banner__slogan {
-        font-size: 3vmin;   
-    }
+	.wb-banner__slogan {
+		font-size: 3vmin;   
+	}
 
-    .spread {
-        height: 15vmin;
-        position: absolute;
-        z-index: 1;
-    }
+	.spread {
+		height: 15vmin;
+		position: absolute;
+		z-index: 1;
+	}
 
-    .spread.duplicate {
-        position: absolute;
-        transform: scale(1.05);
-        filter: blur(1px);
-        opacity: 0.45;
-        z-index: 0;
-        pointer-events: none;
-    }
+	.spread.duplicate {
+		position: absolute;
+		transform: scale(1.05);
+		filter: blur(1px);
+		opacity: 0.45;
+		z-index: 0;
+		pointer-events: none;
+	}
+
+	.wb-banner__memory__img.duplicate {
+		top: calc(66% + 10px);
+		right: calc(25% + 10px);
+		transform: translateX(-50%) scale(1.05);
+	}
+
+	.wb-banner__memory__img {
+		top: 66%;
+		right: 25%;
+		transform: translateX(-50%);
+	}
+
+	.wb-banner__maximus__img.duplicate {
+		top: calc(78% + 10px);
+		left: calc(22% + 10px);
+		
+	}
+
+	.wb-banner__maximus__img {
+		top: 78%;
+		left: 22%;
+	}
+
+	.wb-banner__grotto__img.duplicate {
+		top: calc(58% + 10px);
+		right: calc(20% - 10px);
+	}
+
+	.wb-banner__grotto__img {
+		top: 58%;
+		right: 20%;
+	}
+
+	.wb-banner__quiz__img.duplicate {
+		top: calc(83% + 10px);
+		right: calc(42% - 10px);
+	}
+
+	.wb-banner__quiz__img {
+		top: 83%;
+		right: 42%;
+	}
 
 
+	.wb-banner__code__img.duplicate {
+		top: calc(60% + 10px);
+		left: calc(15% - 10px);
+	}
+	.wb-banner__code__img {
+		top: 60%;
+		left: 15%;
+	}
 
-    .wb-banner__memory__img.duplicate {
-        top: calc(66% + 10px);
-        right: calc(40% + 10px);
-        transform: translateX(-50%) scale(1.05);
-    }
+	.wb-banner__gemoku__img.duplicate {
+		top: calc(74% + 10px);
+		right: calc(14% + 10px);
+	}
 
-    .wb-banner__memory__img {
-        top: 66%;
-        right: 40%;
-        transform: translateX(-50%);
-    }
-
-    .wb-banner__maximus__img.duplicate {
-        top: calc(78% + 10px);
-        left: calc(27% + 10px);
-        
-    }
-
-    .wb-banner__maximus__img {
-        top: 78%;
-        left: 27%;
-    }
-
-    .wb-banner__grotto__img.duplicate {
-        top: calc(58% + 10px);
-        right: calc(45% - 10px);
-    }
-
-    .wb-banner__grotto__img {
-        top: 58%;
-        right: 45%;
-    }
-
-    .wb-banner__quiz__img.duplicate {
-        top: calc(78% + 10px);
-        right: calc(45% - 10px);
-    }
-
-    .wb-banner__quiz__img {
-        top: 78%;
-        right: 45%;
-    }
-
-    .wb-banner__code__img.duplicate {
-        top: calc(60% + 10px);
-        left: calc(15% - 10px);
-    }
-    .wb-banner__code__img {
-        top: 60%;
-        left: 15%;
-    }
-
-    .wb-banner__gemoku__img.duplicate {
-        top: calc(70% + 10px);
-        left: calc(7% + 10px);
-    }
-
-    .wb-banner__gemoku__img {
-        top: 70%;
-        left: 8%; 
-    }
+	.wb-banner__gemoku__img {
+		top: 74%;
+		right: 14%; 
+	}
 
 }
 
@@ -838,6 +850,7 @@ body.dark {
 .wb-home-content {
   padding: 3rem 2rem;
   background: var(--home-bg-light);
+  position: relative;
 }
 
 .dark .wb-home-content {
@@ -850,31 +863,13 @@ body.dark {
   font-size: 2.5rem;
   margin: 0 0 7vmin 0;
   font-weight: 600;
-  background: linear-gradient(
-    270deg,
-    #07934b,
-    #6a5acd,
-    #00c9ff,
-    #92fe9d,
-    #224528
-  );
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientMove 4s linear infinite;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  color: var(--form-color);
 }
 
 /* ================= Home Cards ================= */
 .wb-home-cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(280px, 400px));
+  grid-template-columns: repeat(2, minmax(280px, 300px));
   gap: 2rem;
   justify-content: center;
 }
@@ -891,8 +886,8 @@ body.dark {
   color: var(--home-card-text-light);
   border: none;
   box-shadow: 
-    8px 8px 16px rgba(87, 101, 103, 0.8),  
-    -8px -8px 16px rgba(90, 87, 100, 0.7);
+	8px 8px 16px rgba(87, 101, 103, 0.8),  
+	-8px -8px 16px rgba(90, 87, 100, 0.7);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -900,17 +895,23 @@ body.dark {
   background: var(--home-card-bg-dark);
   color: var(--home-card-text-dark);
   box-shadow: 
-    8px 8px 16px rgba(10, 10, 15, 0.8),
-    -8px -8px 16px rgba(25, 25, 40, 0.7);
+	8px 8px 16px rgba(10, 10, 15, 0.8),
+	-8px -8px 16px rgba(25, 25, 40, 0.7);
 }
 
 .wb-home-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow:
-    12px 12px 20px rgba(52, 61, 77, 0.8),
-    -12px -12px 20px rgba(62, 61, 88, 0.7);
+	12px 12px 20px rgba(52, 61, 77, 0.8),
+	-12px -12px 20px rgba(62, 61, 88, 0.7);
 }
 
+@media (max-width:460px) {
+  .wb-home-cards {
+	grid-template-columns: repeat(1, minmax(280px, 300px));
+
+}
+}
 /* ================= Card Title & Text ================= */
 .wb-home-card-title {
   text-align: center;
@@ -939,8 +940,8 @@ body.dark {
   text-align: center;
   border-radius: 8px 3px 14px 0;
   box-shadow: 
-    4px 4px 6px #01161a,
-    -4px -4px 6px #010813;
+	4px 4px 6px #01161a,
+	-4px -4px 6px #010813;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -948,8 +949,8 @@ body.dark {
   background: var(--home-card-btn-bg-dark);
   color: var(--home-card-btn-text-dark);
   box-shadow: 
-    4px 4px 6px #0a0a1a,
-    -4px -4px 6px #0e0e22;
+	4px 4px 6px #0a0a1a,
+	-4px -4px 6px #0e0e22;
 }
 
 .wb-home-card-button:hover {
@@ -977,12 +978,12 @@ body.dark {
 }
 
 .form-p {
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 6vmin;
-    font-size: 5vmin;
-    color: var(--form-color);
-    
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 6vmin;
+	font-size: 5vmin;
+	color: var(--form-color);
+	
 
 }
 
@@ -1028,8 +1029,7 @@ body.dark {
   border-radius: 12px;
   border: none;
   background: var(--input-bg);
-  box-shadow: inset 6px 6px 12px var(--input-shadow-dark), 
-              inset -6px -6px 12px var(--input-shadow-light);
+  box-shadow: var(--input-shadow-dark), var(--input-shadow-light);
   font-size: 1rem;
   width: 100%;
   color: inherit;
@@ -1052,10 +1052,19 @@ body.dark {
   border-radius: 50%;
   border: none;
   background: var(--captcha-btn-bg);
-  box-shadow: 4px 4px 8px var(--captcha-btn-shadow-dark), 
-              -4px -4px 8px var(--captcha-btn-shadow-light);
+  box-shadow: 
+	var(--captcha-btn-shadow-dark),
+	var(--captcha-btn-shadow-light);
   cursor: pointer;
   font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.wb-home-register__captcha-refresh:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+	6px 6px 12px var(--captcha-btn-shadow-dark),
+	-6px -6px 12px var(--captcha-btn-shadow-light);
 }
 
 /* 🔹 Submit */
@@ -1073,7 +1082,7 @@ body.dark {
 .wb-home-register__submit:hover {
   transform: translateY(-3px);
   box-shadow: 6px 6px 12px rgba(0, 200, 255, 0.6), 
-              -6px -6px 12px rgba(200, 255, 255, 0.7);
+			  -6px -6px 12px rgba(200, 255, 255, 0.7);
 }
 
 /* 🔹 Extra Links */
@@ -1091,6 +1100,64 @@ body.dark {
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .wb-home-sign-up {
+	flex-direction: column;
+	padding: 2rem 1rem;
+
+  }
+
+  .wb-home-register__title {
+	font-size: 1.75rem;
+  }
+
+  .wb-home-register__input,
+  .wb-home-register__input-password {
+	font-size: 0.95rem;
+	padding:3vmin 1vmin;
+	border-radius: 7px;
+  }
+
+  .wb-home-register__submit {
+	padding: 0.65rem;
+	font-size: 0.95rem;
+  }
+
+  .form-p {
+	font-size: 4.5vmin;
+	margin-bottom: 3vmin;
+  }
+}
+
+@media (max-width: 480px) {
+  .wb-home-register {
+	padding: 1.7rem;
+	border-radius: 1.2rem;
+  }
+  
+  .wb-home-register__input,
+  .wb-home-register__input-password {
+	font-size: 0.95rem;
+	padding:2vmin 1vmin;
+	border-radius: 7px;
+  }
+
+  .wb-home-register__title {
+	font-size: 1.5rem;
+  }
+
+  .wb-home-register__submit {
+	padding: 0.55rem;
+	font-size: 0.9rem;
+	border-radius:3px;
+  }
+
+  .form-p {
+	font-size: 4vmin;
+	margin-bottom: 2.5vmin;
+  }
+}
+
 
 /* wb home footer section */
 
@@ -1104,8 +1171,8 @@ body.dark {
   background:var(--footer-bg);
   background-size: cover;
   background-position: start;
-  border-top: 2px dotted rgb(117, 161, 250);
-  border-bottom: 2px dotted  rgb(117, 161, 250);;
+  border-top:  var(--footer-border-top-color);
+  border-bottom: 2px dotted  rgb(117, 161, 250);
 
 }
 
@@ -1131,7 +1198,7 @@ body.dark {
 
 }
 
-/* Footer Links */
+
 .wb-home-footer a {
   text-decoration: none;
   transition: all 0.3s ease;
@@ -1140,7 +1207,7 @@ body.dark {
   position: relative;
   z-index: 1;
   padding: 0.3vmin 0.5vmin;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .wb-home-footer a:hover {
@@ -1151,7 +1218,7 @@ body.dark {
   text-shadow: 3px 3px 6px rgba(0,0,0,0.5), 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-/* Made By Section */
+
 .wb-made-by {
   color: var(--made-by-color);
   font-weight: bolder;
@@ -1159,12 +1226,12 @@ body.dark {
 }
 
 .wb-made-by b {
-  background: var(--made-by-gradient);
+  background: blue;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Heartbeat Animation */
+
 @keyframes heartbeat {
   0%, 40%, 100% { transform: scale(1); }
   20%, 60% { transform: scale(1.2); }
@@ -1172,11 +1239,11 @@ body.dark {
 
 .red-heart {
   margin: 0 0.2rem;
-  color: var(--heart-color);
+  color: red;
+  font-size: 1.3rem;
   vertical-align: middle;
-  text-shadow: var(--heart-shadow);
+  text-shadow: 2px 2px 5px blue;
   animation: heartbeat 1.3s infinite;
-  transition: transform 0.3s ease;
 }
 
 ul,

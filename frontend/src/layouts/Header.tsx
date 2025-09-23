@@ -47,7 +47,7 @@ function Header() {
     <header className="wb-home-header">
       <div className="logo">
         <Link to="/">
-          <img src="https://i.ibb.co/bgw03TLp/weblerlogo2.png" alt="Logo" />
+          <img src="https://i.ibb.co/srxQfdm/pepperwclogo.png" alt="Logo" />
         </Link>
       </div>
 
